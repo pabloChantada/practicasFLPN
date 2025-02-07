@@ -94,7 +94,7 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-~/FPLN/
+
 
 # UV
 #   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
@@ -138,6 +138,8 @@ ENV/
 env.bak/
 venv.bak/
 
+~/FPLN/
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -171,3 +173,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+FLPN/
