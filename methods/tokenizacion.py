@@ -64,6 +64,9 @@ def analizar_vocabulario(archivo):
     plt.legend()
     plt.show()
 
-evaluar_funciones('test_sentences.txt')
+# evaluar_funciones('test_sentences.txt')
 
-analizar_vocabulario('majesty_speeches.txt')
+# analizar_vocabulario('majesty_speeches.txt')
+
+if __name__ == "__main__":
+    pass
