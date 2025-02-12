@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Definir el nombre del entorno virtual correctamente (sin espacios en la asignación)
-ENV_DIR="FLPN"
+ENV_DIR="flpn_env"
 
 # Verificar si el entorno virtual ya existe
 if [ -d "$ENV_DIR" ]; then
