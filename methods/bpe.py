@@ -1,80 +1,75 @@
 from tokenizacion import tokenizar_espacios
 
-
 class BPE:
     def __init__(self, corpus: str, vocab_size: int):
-        self.vocab = self.phrase_segmentation(
-            corpus
-        )  # Diccionario de palabras y sus divisiones
+        """
+        Args:
+            corpus (str): Texto completo que se usará para entrenar el modelo.
+            vocab_size (int): Tamaño objetivo del vocabulario (número de tokens únicos).
+        """
+        self.vocab = self.phrase_segmentation(corpus)  # Diccionario de palabras y sus divisiones
         self.rules = {}  # Diccionario -> {(o,l): ol}
         self.rules_order = []
 
         self.corpus = corpus  # Texto completo
         self.vocab_size = vocab_size
 
-    """
-    FASE 1: SEGMENTACION
-    """
-
     def word_to_letter(self, word):
         """
-        Convierte una palabra a una lista de las letras que la conforman.
+        Convierte una palabra en una lista de sus letras.
 
         Args:
-            word (str): palabra a dividir
+            word (str): Palabra a dividir.
+        
         Returns:
-            list: letras de la palabra
+            list: Lista de letras que componen la palabra.
         """
         return [letter for letter in word]
 
-    # Deberia ser abstracto esto ?
     def phrase_segmentation(self, phrase):
         """
-        Convierte un texto en un diccionario compuesto por: {palabra: letras}
+        Convierte un texto en un diccionario de la forma {palabra: lista_de_letras}.
 
         Args:
-            phrase(str): frase a dividir
+            phrase (str): Texto a dividir.
+        
         Returns:
-            Diccionario con las palabras y sus letras
+            dict: Diccionario en el que cada clave es una palabra y el valor es la lista de sus letras.
         """
         segmented_phrase = tokenizar_espacios(phrase)  # Divide la frase en palabras
         return {word: self.word_to_letter(word) for word in segmented_phrase}
 
     def word_frecuency(self):
         """
-        Obtiene la frecuencia de una palabra en un corpus
+        Calcula la frecuencia de cada palabra del corpus almacenado en la instancia.
 
-        Args:
-            corpus(str): texto completo que contiene palabras
         Returns:
-            Diccionario con las palabras del corpus y su frecuencia
+            dict: Diccionario con las palabras y su frecuencia en el corpus.
         """
-        # Usamos set(corpus) para evitar trabajar con duplicados y mejorar la eficiencia
         words = tokenizar_espacios(self.corpus)
         return {word: words.count(word) for word in set(words)}
 
-    """
-    FASE 1.2: SUBUNIDADES Y ACTUALIZACION DE VOCABULARIO
-    """
-
     def consecutive_subunits(self):
         """
-        Obtiene la subunidad(par de letras) con mayor frecuencia en el vocabulario
+        Identifica la pareja de subunidades (dos tokens consecutivos) que ocurre con mayor frecuencia
+        en el vocabulario actual (almacenado en self.vocab).
 
-        Args:
-            vocab(dict): {palabra: letras}
         Returns:
-            tuple(str, list(str)): Subunidad(str -> "xy") que mas aperece en el vocabulario, unidades que la componenen)
+            tuple[str, tuple[str, str]]: Una tupla donde el primer elemento es el string resultante de fusionar
+            las dos subunidades y el segundo es la tupla de las subunidades originales.
+            Por ejemplo, ("ol", ("o", "l")) si "o" y "l" son la pareja más frecuente.
+            Devuelve None si no hay subunidades para fusionar.
         """
         subunits = {}
 
         for word in self.vocab.values():
-            # Producto escalar con zip: zip(hola, ola) -> (h,o),(o,l),(l,a)
+            # Producto escalar con zip: zip(hola, hola) -> (h,o),(o,l),(l,a)
             for unit in zip(word, word[1:]):
                 subunits[unit] = subunits.get(unit, 0) + 1
 
         if not subunits:
             return None
+
         # Encontrar la frecuencia máxima
         max_frequency = max(subunits.values())
 
@@ -83,65 +78,79 @@ class BPE:
             if freq == max_frequency:
                 return ("".join(unit), unit)
 
-    def add_to_vocab(self, subunit: tuple[str, list[str]]):
+    def add_to_vocab(self, subunit: tuple[str, tuple[str, str]]):
         """
-        Substituye las letras correspondientes a la subunidad indicada en el vocabulario.
-        i.e: {hola: [H,o,l,a]} | Subunidad: "ol" -> nuevo diccionario = {hola: [H,ol,a]}
+        Actualiza el vocabulario fusionando todas las ocurrencias de la pareja de subunidades indicada.
 
         Args:
-            subunit(str,list(str)): subunidad(par de letras) a sustituir en el diccionario, se considera
-            que existe en el diccionario. Lista de partes de la subunidad
-        Returns:
-            Nueva instancia del diccionario, donde las letras son sustituidas por la subunidad
+            subunit (tuple[str, tuple[str, str]]): Una tupla donde el primer elemento es el string
+            fusionado (por ejemplo, "ol") y el segundo es la pareja de letras a fusionar (por ejemplo, ("o", "l")).
         """
-
         new_vocab = {}
-
         for word, letters in self.vocab.items():
             new_word = []
             cnt = 0
-
             while cnt < len(letters):
-                # Comparamos los dos tokens consecutivos con la lista de partes de la regla
-                if (
-                    cnt < len(letters) - 1
-                    and [letters[cnt] + letters[cnt + 1]] == subunit[1]
-                ):
-                    new_word.append(subunit)
-                    cnt += 2  # Avanzamos +2 porque estamos cogiendo dos letras
+                # Se compara la pareja de tokens actual con la subunidad (tupla)
+                if cnt < len(letters) - 1 and (letters[cnt], letters[cnt + 1]) == subunit[1]:
+                    new_word.append(subunit[0])  # Se agrega la fusión, i.e: "ol"
+                    cnt += 2  # Avanzamos +2 porque fusionamos dos tokens
                 else:
-                    # Si no coinciden anadimos la letra correspondiente igual
                     new_word.append(letters[cnt])
                     cnt += 1
-            # Cambiamos la palabra por la palabra fusionada
             new_vocab[word] = new_word
-
         self.vocab = new_vocab
 
-    def add_to_rules(self, subunit: tuple[str, list[str]]):
+    def add_to_rules(self, subunit: tuple[str, tuple[str, str]]):
         """
-        Anade una regla de fusion de la forma: {(x,y): xy}
+        Añade una regla de fusión al modelo.
 
         Args:
-            subunit(str, list(str)): subunidad para formar la nueva regla de fusion, y sus partes. Lista de partes de la subunidad
+            subunit (tuple[str, tuple[str, str]]): Tupla que representa la fusión, por ejemplo, ("ol", ("o", "l")).
         """
         fusion_str, parts = subunit
         self.rules[(parts[0], parts[1])] = fusion_str
         self.rules_order.append((parts[0], parts[1]))
 
-    def generate_vocab_with_subunits(self):
-        current_size = len(self.vocab.copy())
+    def get_current_vocab(self):
+        """
+        Obtiene el conjunto actual de tokens únicos en el vocabulario.
 
-        while current_size < self.vocab_size:
-            # subunit -> (xyz, ["xy","z"])
+        Returns:
+            set: Conjunto de tokens únicos.
+        """
+        # Elementos unicos
+        unique_tokens = set()
+        for tokens in self.vocab.values():
+            unique_tokens.update(tokens)
+        return unique_tokens
+
+    def generate_vocab_with_subunits(self):
+        """
+        Genera nuevas fusiones en el vocabulario (y reglas) hasta alcanzar el tamaño deseado.
+        El proceso se detiene cuando el número de tokens únicos es mayor o igual a self.vocab_size.
+        """
+        # El limite lo establecemos como 100, 150, 200 actualmente
+        while len(self.get_current_vocab()) < self.vocab_size:
+            # Obtener la subunidad más frecuente para el vocabulario actual
             subunit = self.consecutive_subunits()
             if subunit is None:
                 break
             self.add_to_vocab(subunit)
             self.add_to_rules(subunit)
-            current_size += 1
 
     def tokenize_sentence(self, sentence: str):
+        """
+        Tokeniza una oración aplicando las reglas de fusión aprendidas.
+        Las reglas se aplican en el orden en el que fueron agregadas.
+
+        Args:
+            sentence (str): Oración a tokenizar.
+        
+        Returns:
+            dict: Diccionario donde las claves son las palabras originales y los valores son listas
+                  con la tokenización resultante (subunidades fusionadas).
+        """
         tokenized_words = {}
         segmentation = self.phrase_segmentation(sentence)
 
@@ -163,58 +172,55 @@ class BPE:
 
 
 if __name__ == "__main__":
-    # Corpus de prueba
-    corpus = "Hola caracola"
-    # El vocab_size aquí es irrelevante ya que asignaremos las reglas manualmente.
-    bpe = BPE(corpus, vocab_size=100)
+    # Leer todo el corpus de entrenamiento
+    try:
+        with open("training_sentences.txt", "r") as train_file:
+            training_lines = [line.rstrip("\n") for line in train_file if line.strip()]
+    except FileNotFoundError:
+        print("El archivo training_sentences.txt no se encontró.")
+        exit(1)
+        
+    # Entrenamos el modelo con todo el corpus -> training_corpus
+    training_corpus = " ".join(training_lines)
+    # Lista de tamaños de vocabulario a probar
+    vocab_sizes = [100, 150, 200]
+    
+    # Leer todo el conjunto de prueba
+    try:
+        with open("test_sentences.txt", "r") as test_file:
+            test_lines = [line.rstrip("\n") for line in test_file if line.strip()]
+    except FileNotFoundError:
+        print("El archivo test_sentences.txt no se encontró.")
+        exit(1)
+    
+    for vs in vocab_sizes:
+        print(f"=== Entrenamiento con vocab_size={vs} ===")
+        # Entrenar el modelo BPE 
+        bpe_model = BPE(training_corpus, vocab_size=vs)
+        bpe_model.generate_vocab_with_subunits()
+        
+        # Vocabulario final (tokens únicos)
+        print("Vocabulario final:")
+        print(bpe_model.get_current_vocab(),"\n")
+        
+        # Tokenizar el conjunto de entrenamiento
+        print("--- Tokenización del conjunto de entrenamiento ---")
+        for sentence in training_lines:
+            tokens_dict = bpe_model.tokenize_sentence(sentence)
+            # Reconstruir la lista de tokens en el orden original
+            token_list = []
+            for word in sentence.split():
+                token_list.extend(tokens_dict[word])
+            print(f"Input: '{sentence}' -> Tokens: {token_list}")
+        print()
+        
+        # Tokenizar el conjunto de prueba
+        print("--- Tokenización del conjunto de prueba ---")
+        for sentence in test_lines:
+            tokens_dict = bpe_model.tokenize_sentence(sentence)
+            token_list = []
+            for word in sentence.split():
+                token_list.extend(tokens_dict[word])
+            print(f"Input: '{sentence}' -> Tokens: {token_list}")
+        print("\n" + "="*40 + "\n")
 
-    # # Asignamos manualmente las reglas de fusión y su orden (según el ejemplo)
-    # bpe.rules = {
-    #         ("o", "l"): "ol",
-    #         ("ol", "a"): "ola",
-    #         ("a", "c"): "ac",
-    #         ("H", "ola"): "Hola"
-    #         }
-    # bpe.rules_order = [
-    #         ("o", "l"),
-    #         ("ol", "a"),
-    #         ("a", "c"),
-    #         ("H", "ola")
-    #         ]
-
-    # Mostramos la segmentación inicial:
-    # print("Segmentación inicial:")
-    # print(bpe.vocab)
-    # Salida esperada:
-    # {'Hola': ['H', 'o', 'l', 'a'], 'caracola': ['c', 'a', 'r', 'a', 'c', 'o', 'l', 'a']}
-
-    # Aplicamos la tokenización (sin unir los tokens)
-    # tokenized = bpe.tokenize_sentence(corpus)
-
-    # Imprimimos el resultado final para cada palabra:
-    # print("\nTokenización final (listas de subunidades):")
-    # for word, tokens in tokenized.items():
-    #     print(f"{word}: {tokens}")
-    #
-    # La salida esperada es:
-    # Hola: ["Hola"]
-    # caracola: ["c", "ac", "r", "a", "c", "ola"]
-
-    file = open("/home/clown/2-semester/practicasFLPN/text/test_sentences.txt", "r")
-
-    i = 0
-    for line in file:
-        line = line.rstrip("\n")
-        # Se genera un BPE para la línea (en un escenario real, el entrenamiento se hace sobre un corpus)
-        bpe = BPE(line, 150)
-        bpe.generate_vocab_with_subunits()
-        # print(f"Input: {line} -> Reglas aprendidas: {bpe.rules}")
-        # Para tokenizar una nueva oración (podrías usar la misma línea o una diferente)
-        tokens = bpe.tokenize_sentence(line)
-        print(f"Input: {line} -> Tokens: {tokens}")
-        print("\nTokenización final (listas de subunidades):")
-        for word, tokens in tokens.items():
-            print(f"{word}: {tokens}")
-        i += 1
-        if i > 3:
-            break
