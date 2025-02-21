@@ -66,8 +66,6 @@ class wordPiece:
 
         return vocab, new_subwords
         
-        return vocab, new_subwords
-
     def build_vocab(self):
         sentences = self.preprocess_corpus(self.corpus)
         vocab, word_freq, subwords = self.initialize_vocab(sentences)
@@ -84,7 +82,15 @@ class wordPiece:
                 break  # Nos aseguramos de no pasarnos del tamaño límite
 
         return vocab, subwords
+    def get_current_vocab(self):
+        """
+        Obtiene el conjunto actual de tokens únicos en el vocabulario.
 
+        Returns:
+            set: Conjunto de tokens únicos.
+        """
+        # Elementos unicos
+        return set(self.vocab.keys())
     def tokenize_word(self, word, vocab):
         subwords = []  # Lista donde se almacenarán las subpalabras
         remaining = word  # Parte de la palabra que aún no ha sido procesada
