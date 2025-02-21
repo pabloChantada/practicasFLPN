@@ -1,16 +1,17 @@
 from bpe import BPE
-
+from wordPiece import wordPiece
 class EvaluateModels:
     def __init__(self, model: str) -> None:
         self.model = model
         self.vocab_sizes = [100, 150, 200]
-        self.training_corpus = self.load_file("/home/clown/2-semester/practicasFLPN/text/training_sentences.txt")
-        self.test_corpus = self.load_file("/home/clown/2-semester/practicasFLPN/text/test_sentences.txt")
+        self.training_corpus = self.load_file("text/training_sentences.txt")
+        self.test_corpus = self.load_file("text/test_sentences.txt")
 
     def load_file(self, file):
         try:
-            with open(file, "r") as f:
-                return f.read()
+            with open(file, 'r', encoding='utf-8') as archivo:
+                return archivo.read()
+            
         except FileNotFoundError:
             print(f"Error: El archivo {file} no se encontró.")
             return None
@@ -48,9 +49,26 @@ class EvaluateModels:
                         print(f"{word}: {token_list}")
                 print("-" * 40)
 
-            elif self.model == "WordPiece":
-                pass
-                # model = WordPiece(corpus_train, size)
+            elif self.model == "wordPiece":
+                model = wordPiece(corpus_train, size)
+
+                # Entrenamiento
+                model.vocab = model.build_vocab()[0]
+                print("Vocabulario entrenado:")
+                print(model.vocab)
+                print("\nTokenización del conjunto de entrenamiento:")
+                tokens_train = model.tokenize_sentence(corpus_train)
+                for word in tokens_train:
+                    print(f"{word}")
+
+                # Test
+                print("\nTokenización del conjunto de prueba:")
+                for sentence in sentences_test:
+                    tokens_test = model.tokenize_sentence(sentence)
+                    print(f"Input: {sentence} -> Tokens: {tokens_test}")
+                    for word in tokens_test:
+                        print(f"{word}")
+                print("-" * 40)
             else:
                 print("Modelo no soportado")
                 return
@@ -58,11 +76,11 @@ class EvaluateModels:
 
 
 if __name__ == "__main__":
-    print("Implementación para BPE:")
-    trainer_bpe = EvaluateModels("BPE")
-    trainer_bpe.evaluate()
+    # print("Implementación para BPE:")
+    # trainer_bpe = EvaluateModels("BPE")
+    # trainer_bpe.evaluate()
 
-    # print("\nImplementación para WordPiece:")
-    # trainer_wp = TrainModels("WordPiece")
-    # trainer_wp.train()
+    print("\nImplementación para WordPiece:")
+    trainer_wp = EvaluateModels("wordPiece")
+    trainer_wp.evaluate()
 
