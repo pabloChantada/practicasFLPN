@@ -2,7 +2,7 @@ from tokenizacion import tokenizar_espacios, tokenizar_signos_puntuacion, tokeni
 import matplotlib.pyplot as plt
 from bpe import BPE
 from wordPiece import wordPiece
-# from wordPiece import WordPiece
+import numpy as np
 
 def analize_all_vocabs(file, n=2, max_vocab=3000):
     with open(file, 'r',encoding="utf-8") as f:
@@ -52,6 +52,7 @@ def analize_all_vocabs(file, n=2, max_vocab=3000):
         else:
             last_bpe_value = vocab_sizes_bpe[-1] if vocab_sizes_bpe else 0  # Mantiene el último valor conocido
             last_wp_value = vocab_sizes_wp[-1] if vocab_sizes_wp else 0 
+
         vocab_sizes_bpe.append(last_bpe_value)
         vocab_sizes_wp.append(last_wp_value)
         
@@ -60,14 +61,30 @@ if __name__ == "__main__":
     file = "majesty_speeches.txt"
     vocab_spaces, vocab_signos, vocab_ngrams, vocab_bpe, vocab_wp = analize_all_vocabs(file, n=2, max_vocab=30000)
 
+
+    def interpolate_values(values, total_length, step=500):
+        """Interpolar valores para que tengan el mismo tamaño que el resto de las listas."""
+        if len(values) > 1:
+            x_existing = np.arange(0, total_length, step)  # Puntos donde se calcularon los valores
+            y_existing = np.array(values)  # Tamaño del vocabulario en esos puntos
+            x_interp = np.arange(total_length)  # Puntos donde queremos valores interpolados
+            return np.interp(x_interp, x_existing, y_existing)  # Interpolación lineal
+        return np.zeros(total_length)  # Si hay un solo punto, usamos ceros
+
+    # Aplicamos interpolación a BPE y WordPiece
+    vocab_bpe_interp = interpolate_values(vocab_bpe, len(vocab_spaces), step=500)
+    vocab_wp_interp = interpolate_values(vocab_wp, len(vocab_spaces), step=500)
+
+    # Graficamos con interpolación
     plt.figure(figsize=(12, 8))
     plt.plot(vocab_spaces, label='Espacios')
     plt.plot(vocab_signos, label='Signos de puntuación')
     plt.plot(vocab_ngrams, label='N-gramas (n=2)')
-    plt.plot(vocab_bpe, label='BPE (Vocab max=3000)')
-    plt.plot(vocab_wp, label='wordpiece (Vocab max=3000)')
+    plt.plot(vocab_bpe_interp, label='BPE (Interpolado, Vocab max=3000)', linestyle='dashed')
+    plt.plot(vocab_wp_interp, label='WordPiece (Interpolado, Vocab max=3000)', linestyle='dashed')
     plt.xlabel('Número de oraciones procesadas')
     plt.ylabel('Tamaño del vocabulario')
     plt.title('Evolución del tamaño del vocabulario')
     plt.legend()
     plt.show()
+
