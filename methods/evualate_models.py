@@ -108,10 +108,10 @@ class EvaluateModels:
 if __name__ == "__main__":
 
     print("Implementación para BPE:")
-    trainer_bpe = EvaluateModels("BPE", vocab_sizes=[150], train_file="methods/training_sentences.txt", test_file="methods/test_sentences.txt")
+    trainer_bpe = EvaluateModels("BPE", vocab_sizes=[150], train_file="training_sentences.txt", test_file="test_sentences.txt")
     trainer_bpe.evaluate()
 
     print("\nImplementación para WordPiece:")
-    trainer_wp = EvaluateModels("wordPiece",vocab_sizes=[150], train_file="methods/training_sentences.txt", test_file="methods/test_sentences.txt")
+    trainer_wp = EvaluateModels("wordPiece",vocab_sizes=[150], train_file="training_sentences.txt", test_file="test_sentences.txt")
     trainer_wp.evaluate()
 

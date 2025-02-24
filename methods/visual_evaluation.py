@@ -5,13 +5,10 @@ from wordPiece import wordPiece
 # from wordPiece import WordPiece
 
 def analize_all_vocabs(file, n=2, max_vocab=3000):
-    with open(file, 'r',encoding="utf-8") as f:
+    with open(file, 'r', encoding="utf-8") as f:
         texts = [line.strip() for line in f if line.strip()]
     
-    # PARA COMPROBAR SI FUNCIONA O NO
-    # texts = texts[:300]
-
-    # Vocabularios acumulativos para los metodos tradicionales 
+    # Vocabularios acumulativos para los métodos tradicionales
     vocab_spaces = set()
     vocab_symbols = set()
     vocab_ngrams = set()
@@ -19,14 +16,18 @@ def analize_all_vocabs(file, n=2, max_vocab=3000):
     vocab_size_spaces = []
     vocab_size_symbols = []
     vocab_size_ngrams = []
-    vocab_sizes_bpe = []        # Lista para almacenar el tamaño del vocabulario de BPE en cada iteración
-    vocab_sizes_wp = []  # Placeholder para WordPiece (no implementado)
+    vocab_sizes_bpe = []  # Lista para almacenar el tamaño del vocabulario de BPE en cada iteración
+    vocab_sizes_wp = []   # Lista para almacenar el tamaño del vocabulario de WordPiece en cada iteración
 
-    # Vamos creando corpus para a medida que aumentamos las frases
+    # Inicializar modelos
+    bpe_model = None
+    wp_model = None
+
+    # Vamos creando el corpus a medida que aumentamos las frases
     for i in range(1, len(texts) + 1):
-        # Empezamos el contador en 1 para facilitar la visibilidad
         sentence = texts[i - 1]
-        # Metodos tradicionales
+        
+        # Métodos tradicionales
         vocab_spaces.update(tokenizar_espacios(sentence))
         vocab_symbols.update(tokenizar_signos_puntuacion(sentence))
         vocab_ngrams.update(tokenizar_n_gramas(sentence, n))
@@ -35,23 +36,30 @@ def analize_all_vocabs(file, n=2, max_vocab=3000):
         vocab_size_symbols.append(len(vocab_symbols))
         vocab_size_ngrams.append(len(vocab_ngrams))
         
-        # BPE: entrenamos el modelo hasta la frase actual 
-
-        # BPE: entrenamos el modelo hasta la frase actual 
-        if i % 500 == 0:
+        # BPE y WordPiece: entrenamos el modelo hasta la frase actual
+        if i % 250 == 0 or i == len(texts):  # Entrenar cada 500 frases o al final
             corpus = " ".join(texts[:i])
+            
+            # Entrenar BPE
             bpe_model = BPE(corpus, vocab_size=max_vocab)
             bpe_model.generate_vocab_with_subunits()
             current_vocab_bpe = bpe_model.get_current_vocab()
             last_bpe_value = len(current_vocab_bpe)
 
+            # Entrenar WordPiece
             wp_model = wordPiece(corpus, vocab_size=max_vocab)
             wp_model.build_vocab()
             current_vocab_wp = wp_model.get_current_vocab()
             last_wp_value = len(current_vocab_wp)
+
+            # Debug: Imprimir vocabularios
+            print(f"Iteration {i}: BPE Vocab Size = {last_bpe_value}, WordPiece Vocab Size = {last_wp_value}")
+            print("WordPiece Vocabulary:", current_vocab_wp)
         else:
-            last_bpe_value = vocab_sizes_bpe[-1] if vocab_sizes_bpe else 0  # Mantiene el último valor conocido
-            last_wp_value = vocab_sizes_wp[-1] if vocab_sizes_wp else 0 
+            # Mantener los últimos valores conocidos
+            last_bpe_value = vocab_sizes_bpe[-1] if vocab_sizes_bpe else 0
+            last_wp_value = vocab_sizes_wp[-1] if vocab_sizes_wp else 0
+        
         vocab_sizes_bpe.append(last_bpe_value)
         vocab_sizes_wp.append(last_wp_value)
         
@@ -59,7 +67,7 @@ def analize_all_vocabs(file, n=2, max_vocab=3000):
 if __name__ == "__main__":
     file = "majesty_speeches.txt"
     vocab_spaces, vocab_signos, vocab_ngrams, vocab_bpe, vocab_wp = analize_all_vocabs(file, n=2, max_vocab=30000)
-
+    print(vocab_wp)
     plt.figure(figsize=(12, 8))
     plt.plot(vocab_spaces, label='Espacios')
     plt.plot(vocab_signos, label='Signos de puntuación')
