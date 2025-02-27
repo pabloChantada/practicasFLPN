@@ -171,11 +171,12 @@ class WordPiece:
                     remaining = remaining[i:]  
                     break  
             else:
-                subwords.append("[UNK]")  
+                # Si no se encuentra ninguna subpalabra, descomponer en caracteres
+                for char in remaining:
+                    subwords.append("##" + char if len(subwords) > 0 else char)
                 remaining = ""  
         
         return subwords
-
     def tokenize_sentence(self, sentence):
         """
         Tokeniza una oración completa utilizando el WordPiece.
@@ -211,7 +212,7 @@ if __name__ == "__main__":
     # Entrenamos el modelo con todo el corpus -> training_corpus
     training_corpus = " ".join(training_lines)
     # Lista de tamaños de vocabulario a probar
-    vocab_sizes = [150]
+    vocab_sizes = [1000]
     # Leer todo el conjunto de prueba
     try:
         with open("test_sentences.txt", "r", encoding="utf-8") as test_file:
