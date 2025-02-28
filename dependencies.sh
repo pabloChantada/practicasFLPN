@@ -17,7 +17,7 @@ source "$ENV_DIR/bin/activate"
 
 # Librerías de FLPN
 echo "Installing dependencies for $ENV_DIR"
-pip install regex numpy pandas matplotlib
+pip install scipy regex numpy pandas matplotlib
 
 echo "Environment created successfully"
 
