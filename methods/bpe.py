@@ -1,4 +1,4 @@
-from tokenizacion import tokenizar_espacios
+from tokenize_simple import Tokenizer
 
 class BPE:
     def __init__(self, corpus: str, vocab_size: int):
@@ -36,7 +36,7 @@ class BPE:
         Returns:
             dict: Diccionario en el que cada clave es una palabra y el valor es la lista de sus letras.
         """
-        segmented_phrase = tokenizar_espacios(phrase)  # Divide la frase en palabras
+        segmented_phrase = Tokenizer.tokenize_by_spaces(phrase)  # Divide la frase en palabras
         return {word: self.word_to_letter(word) for word in segmented_phrase}
 
     def word_frecuency(self):
@@ -46,7 +46,8 @@ class BPE:
         Returns:
             dict: Diccionario con las palabras y su frecuencia en el corpus.
         """
-        words = tokenizar_espacios(self.corpus)
+        text = self.corpus
+        words = Tokenizer.tokenize_by_spaces(text)
         return {word: words.count(word) for word in set(words)}
 
     def consecutive_subunits(self):
