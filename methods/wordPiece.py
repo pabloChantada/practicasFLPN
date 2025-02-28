@@ -160,21 +160,42 @@ class WordPiece:
         subwords = []  # Lista donde se almacenarán las subpalabras
         remaining = word  # Parte de la palabra que aún no ha sido procesada
         
+        first_subword = True  # Bandera para identificar la primera subpalabra
+        
         while remaining:  # Mientras haya algo por procesar
-            for i in range(len(remaining), 1, -1):  # Ahora empezamos desde longitud 2
-                candidate = remaining[:i]  
-                if len(subwords) > 0:
-                    candidate = "##" + candidate  
-
-                if candidate in vocab:
-                    subwords.append(candidate)  
-                    remaining = remaining[i:]  
-                    break  
+            if first_subword:
+                # Para la primera subpalabra, buscamos desde longitud 2 hacia arriba
+                start_length = 2
             else:
-                # Si no se encuentra ninguna subpalabra, descomponer en caracteres
-                for char in remaining:
-                    subwords.append("##" + char if len(subwords) > 0 else char)
-                remaining = ""  
+                # Para las subpalabras restantes, buscamos desde longitud 1 hacia arriba
+                start_length = 1
+            
+            found = False  # Bandera para indicar si se encontró una subpalabra válida
+            
+            # Buscar la subpalabra más larga posible que esté en el vocabulario
+            for i in range(len(remaining), start_length - 1, -1):
+                candidate = remaining[:i]
+                if len(subwords) > 0:
+                    candidate = "##" + candidate
+                
+                if candidate in vocab:
+                    subwords.append(candidate)
+                    remaining = remaining[i:]
+                    found = True
+                    first_subword = False  # Ya no es la primera subpalabra
+                    break
+            
+            if not found:
+                if first_subword:
+                    # Si es la primera subpalabra y no se encontró ninguna de longitud 2,
+                    # agregamos UNK y terminamos
+                    subwords.append("[UNK]")
+                    remaining = ""  # Terminamos de procesar la palabra
+                else:
+                    # Para subpalabras restantes, descomponer en caracteres
+                    for char in remaining:
+                        subwords.append("##" + char if len(subwords) > 0 else char)
+                    remaining = ""
         
         return subwords
     def tokenize_sentence(self, sentence):
