@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-import numpy as np
 from sklearn.manifold import TSNE
+from cosine_sim import main as visualize_args
 
 def visualize_tsne_embeddings(words, embeddings, word_index, filename=None):
     """
@@ -87,20 +87,5 @@ def visualize_all_tsne_embeddings(embeddings, word_index, words_to_plot, words_t
 
 
 if __name__ == "__main__":
-    # Mock embeddings and word_index
-    embeddings = np.random.randn(100, 50)  # Mock embeddings with 100 words and 50 dimensions
-    word_index = {f"word_{i}": i for i in range(100)}  # Mock word index
-
-    # Example usage of the first function
-    def example_plot_1():
-        words = ["word_1", "word_2", "word_3", "word_4", "word_5"]  # Select some words to plot
-        visualize_tsne_embeddings(words, embeddings, word_index, filename="plot_1.png")
-
-    # Example usage of the second function
-    def example_plot_2():
-        words_to_plot = ["word_10", "word_20", "word_30", "word_40", "word_50"]  # Select some words to plot
-        words_to_label = ["word_10", "word_30", "word_50"]  # Select some words to label
-        visualize_all_tsne_embeddings(embeddings, word_index, words_to_plot, words_to_label, filename="plot_2.png")
-
-    example_plot_1()
-    example_plot_2()
+    words, embeddings, word_index = visualize_args()
+    visualize_tsne_embeddings(words, embeddings, word_index)
