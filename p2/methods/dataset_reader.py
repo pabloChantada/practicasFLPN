@@ -1,66 +1,79 @@
+from collections import defaultdict
+from keras.preprocessing.text import Tokenizer
 import numpy as np
-from tensorflow.keras.preprocessing.text import Tokenizer
+import random
 
-# Función para leer el archivo y obtener el texto
-def read_dataset(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        text = file.read()
-    return text
+def read_dataset(filepath):
+    """Lee el dataset y devuelve el texto como una lista de palabras."""
+    with open(filepath, "r", encoding="utf-8") as f:
+        return f.read().lower().split()
 
-# Función para crear secuencias de entrenamiento usando ventana deslizante
-def create_training_sequences(tokenized_text, window_size):
-    input_sequences = []
-    targets = []
-    
-    for i in range(window_size, len(tokenized_text)):
-        # Obtiene la secuencia de la ventana anterior a la posición actual
-        window_sequence = tokenized_text[i-window_size:i]
-        # La palabra objetivo es la palabra actual
-        target_word = tokenized_text[i]
-        
-        input_sequences.append(window_sequence)
-        targets.append(target_word)
-    
-    return np.array(input_sequences), np.array(targets)
+def load_target_words(filepath):
+    """Carga las palabras objetivo desde un archivo y las devuelve como un conjunto."""
+    with open(filepath, "r", encoding="utf-8") as f:
+        return set(f.read().lower().split())
 
-if __name__ == "__main__":
-    # Configuración
-    dataset_path = "/home/clown/2-semester/practicasFLPN/p2/materiales/the_fellowship_of_the_ring.txt"
-    window_size = 5  # Tamaño de la ventana de contexto
-    
-    # 1. Leer el dataset
-    text = read_dataset(dataset_path)
-    
-    # 2. Tokenizar el texto
-    tokenizer = Tokenizer()
-    tokenizer.fit_on_texts([text])
-    word_index = tokenizer.word_index
-    vocab_size = len(word_index) + 1  # +1 para el token de padding
-    
-    # Convertir el texto a secuencia de tokens
-    tokenized_text = tokenizer.texts_to_sequences([text])[0]
-    
-    # 3. Crear secuencias de entrenamiento usando ventana deslizante
-    X, y = create_training_sequences(tokenized_text, window_size)
-    
-    # Mostrar información sobre los datos de entrenamiento
-    print(f"Vocabulario: {len(word_index)} palabras únicas")
-    print(f"Número de secuencias de entrenamiento: {len(X)}")
-    print(f"Forma de X: {X.shape}")
-    print(f"Forma de y: {y.shape}")
-    
-    # Ejemplo de una secuencia de entrada y su salida esperada
-    if len(X) > 0:
-        example_idx = 10  # Índice de ejemplo
-        if example_idx < len(X):
-            context = X[example_idx]
-            target = y[example_idx]
-            
-            # Convertir tokens a palabras para mejor visualización
-            reverse_word_index = {v: k for k, v in word_index.items()}
-            context_words = [reverse_word_index.get(token, "<UNK>") for token in context]
-            target_word = reverse_word_index.get(target, "<UNK>")
-            
-            print("\nEjemplo de secuencia de entrenamiento:")
-            print(f"Contexto: {context} -> {context_words}")
-            print(f"Palabra objetivo: {target} -> {target_word}")
+def create_training_pairs(tokenized_text, target_words, vocab_size, context_window=2, num_negative_samples=2):
+    """
+    Genera pares de entrenamiento positivos y negativos.
+
+    - context_window=2 significa que se toman 2 palabras antes y 2 después.
+    - Se generan ejemplos negativos para mejorar el aprendizaje.
+    """
+    pairs, labels = [], []
+    vocab_list = list(range(1, vocab_size))  # Lista de índices de palabras disponibles
+
+    for i, word_index in enumerate(tokenized_text):
+        if word_index in target_words:  # Solo si la palabra está en la lista objetivo
+            window_start = max(i - context_window, 0)
+            window_end = min(i + context_window + 1, len(tokenized_text))
+
+            context_words = []
+            for j in range(window_start, window_end):
+                if i != j:  
+                    pairs.append([word_index, tokenized_text[j]])  # Relación positiva
+                    labels.append(1)
+                    context_words.append(tokenized_text[j])
+
+            # Generar palabras negativas
+            for _ in range(num_negative_samples):
+                negative_word = random.choice(vocab_list)
+                while negative_word in context_words or negative_word == word_index:  
+                    negative_word = random.choice(vocab_list)
+
+                pairs.append([word_index, negative_word])  # Relación negativa
+                labels.append(0)
+
+    return np.array(pairs), np.array(labels)
+
+
+
+
+def create_context(tokenized_text, target_indexes, window_size=2):
+    """
+    Genera ventanas de contexto y palabras objetivo para las palabras objetivo específicas.
+
+    Args:
+        tokenized_text (list): Texto tokenizado (lista de índices de palabras).
+        target_indexes (set): Conjunto de índices de las palabras objetivo.
+        window_size (int): Tamaño de la ventana de contexto (número de palabras a cada lado).
+
+    Returns:
+        tuple: (X, y), donde X es un array de ventanas de contexto e y es un array de palabras objetivo.
+    """
+    X = []
+    y = []
+
+    for i in range(window_size, len(tokenized_text) - window_size):
+        target = tokenized_text[i]  # Palabra objetivo
+
+        # Solo generar contexto si la palabra objetivo está en target_indexes
+        if target in target_indexes:
+            # Ventana de contexto: palabras anteriores y posteriores
+            context = tokenized_text[i - window_size:i] + tokenized_text[i + 1:i + window_size + 1]
+            X.append(context)
+            y.append(target)
+
+    return np.array(X), np.array(y)
+
+
