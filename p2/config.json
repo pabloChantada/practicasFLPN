@@ -1,0 +1,11 @@
+[
+    {"corpus": "1", "ventana": 5, "dims": 20},
+    {"corpus": "1", "ventana": 5, "dims": 50},
+    {"corpus": "1", "ventana": 5, "dims": 100},
+    {"corpus": "2", "ventana": 5, "dims": 20},
+    {"corpus": "2", "ventana": 5, "dims": 50},
+    {"corpus": "2", "ventana": 5, "dims": 100},
+    {"corpus": "3", "ventana": 5, "dims": 20},
+    {"corpus": "3", "ventana": 5, "dims": 50},
+    {"corpus": "3", "ventana": 5, "dims": 100}
+]
