@@ -159,8 +159,10 @@ if __name__ == "__main__":
         visualize_tsne_embeddings(
             words=target_words,  # Lista de palabras objetivo
             embeddings=embeddings,  # Embeddings entrenados
-            word_index=word_index,  # Diccionario de palabras a índices
-            filename=plot_filename  # Guardar la visualización en un archivo
+            word_index=word_index,
+            window=2*ventana+1,
+            dims=dims,  # Diccionario de palabras a índices
+            filename=plot_filename # Guardar la visualización en un archivo
         )
 
         # Calcular similitudes de coseno

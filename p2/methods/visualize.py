@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from cosine_sim import main as visualize_args
 
-def visualize_tsne_embeddings(words, embeddings, word_index, filename=None):
+def visualize_tsne_embeddings(words, embeddings, word_index,window,dims, filename=None):
     """
     Visualizes t-SNE embeddings of selected words.
 
@@ -20,7 +20,7 @@ def visualize_tsne_embeddings(words, embeddings, word_index, filename=None):
     selected_embeddings = embeddings[indices]
 
     # Set perplexity for t-SNE, it's recommended to use a value less than the number of selected words
-    perplexity = min(5,len(words) - 1)
+    perplexity = min(5, len(words) - 1)
 
     # Use t-SNE to reduce dimensionality
     tsne = TSNE(n_components=2, perplexity=perplexity, random_state=0)
@@ -32,12 +32,16 @@ def visualize_tsne_embeddings(words, embeddings, word_index, filename=None):
         plt.scatter(reduced_embeddings[i, 0], reduced_embeddings[i, 1])
         plt.annotate(word, xy=(reduced_embeddings[i, 0], reduced_embeddings[i, 1]), xytext=(5, 2),
                      textcoords='offset points', ha='right', va='bottom')
+    
+    # Add title to the plot
+    plt.title(f'Visualización TSNE con tamaño de ventana {window} y {dims} dimensiones de embedding')
 
     # Save or display the plot
     if filename:
         plt.savefig(filename)
     else:
         plt.show()
+
 
 
 def visualize_all_tsne_embeddings(embeddings, word_index, words_to_plot, words_to_label=None, filename=None):

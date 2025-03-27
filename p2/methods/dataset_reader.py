@@ -20,6 +20,7 @@ def create_training_pairs(tokenized_text, target_words, vocab_size, context_wind
     - context_window=2 significa que se toman 2 palabras antes y 2 después.
     - Se generan ejemplos negativos para mejorar el aprendizaje.
     """
+    num_negative_samples = 2*context_window
     pairs, labels = [], []
     vocab_list = list(range(1, vocab_size))  # Lista de índices de palabras disponibles
 

@@ -145,9 +145,17 @@ if __name__ == "__main__":
         tokenized_text = tokenizer.texts_to_sequences([text])[0]
         target_indexes = {word_index[word] for word in target_words if word in word_index}  # Convertir target a índices
 
-        # 3. Crear secuencias de entrenamiento usando ventana deslizante
+        # Diccionario de mapeo de índices a palabras
+        word_map = {v: k for k, v in word_index.items()}
+
+        # Generar pares de entrenamiento
         pairs, labels = create_training_pairs(tokenized_text, target_indexes, vocab_size, window_size)
 
+        # Guardar los primeros 20 pares en un archivo de texto
+        with open("training_pairs.txt", "w") as f:
+            for i in range(min(100, len(pairs))):
+                word_pair = (word_map.get(pairs[i][0], str(pairs[i][0])), word_map.get(pairs[i][1], str(pairs[i][1])))
+                f.write(f"Par: {word_pair}, Label: {labels[i]}\n")
         # Mostrar información sobre los datos de entrenamiento
         print(f"Vocabulario: {len(word_index)} palabras únicas")
         print(f"Número de secuencias de entrenamiento: {len(pairs)}")
@@ -187,8 +195,10 @@ if __name__ == "__main__":
         visualize_tsne_embeddings(
             words=target_words,  # Lista de palabras objetivo
             embeddings=embeddings,  # Embeddings entrenados
-            word_index=word_index,  # Diccionario de palabras a índices
-            filename=plot_filename  # Guardar la visualización en un archivo
+            word_index=word_index,
+            window=2*ventana+1,
+            dims=dims,  # Diccionario de palabras a índices
+            filename=plot_filename # Guardar la visualización en un archivo
         )
 
         # Calcular similitudes de coseno
