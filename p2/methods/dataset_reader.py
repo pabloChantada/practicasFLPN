@@ -1,5 +1,5 @@
 from collections import defaultdict
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
 import random
 
@@ -13,14 +13,14 @@ def load_target_words(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         return set(f.read().lower().split())
 
-def create_training_pairs(tokenized_text, target_words, vocab_size, context_window=2, num_negative_samples=2):
+def create_training_pairs(tokenized_text, target_words, vocab_size, context_window=2, num_negative_samples=0):
     """
     Genera pares de entrenamiento positivos y negativos.
 
     - context_window=2 significa que se toman 2 palabras antes y 2 después.
     - Se generan ejemplos negativos para mejorar el aprendizaje.
     """
-    num_negative_samples = 2*context_window
+    
     pairs, labels = [], []
     vocab_list = list(range(1, vocab_size))  # Lista de índices de palabras disponibles
 

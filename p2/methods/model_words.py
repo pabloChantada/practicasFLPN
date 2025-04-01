@@ -119,6 +119,10 @@ if __name__ == "__main__":
         word_index = tokenizer.word_index
         vocab_size = len(word_index) + 1  # +1 para el token de padding
 
+        vocab = [""] * (len(word_index) + 1)  # +1 porque los índices empiezan en 1
+        for word, idx in word_index.items():
+            vocab[idx] = word
+
         # Convertir el texto a secuencia de tokens
         tokenized_text = tokenizer.texts_to_sequences([text])[0]
         target_indexes = {word_index[word] for word in target_words if word in word_index}  # Convertir target a índices
@@ -155,6 +159,7 @@ if __name__ == "__main__":
         # Obtener los embeddings entrenados
         embeddings = model.get_layer('embedding_context').get_weights()[0]
 
+        
         # Visualizar los embeddings de las palabras objetivo
         visualize_tsne_embeddings(
             words=target_words,  # Lista de palabras objetivo

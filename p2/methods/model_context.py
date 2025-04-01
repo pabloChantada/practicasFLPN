@@ -6,14 +6,18 @@ from tensorflow.keras import Model, Input
 from tensorflow.keras.layers import Embedding, Reshape, Dot, Dense
 import numpy as np
 from dataset_reader import create_training_pairs, read_dataset, load_target_words
-from visualize import visualize_tsne_embeddings
+from visualize import visualize_tsne_embeddings, visualize_all_tsne_embeddings
 from cosine_sim import compute_cosine_similarities, save_cosine_similarities
 import json
-# @keras.saving.register_keras_serializable()
 
 
 
-@tf.keras.saving.register_keras_serializable()
+
+
+
+
+
+@keras.saving.register_keras_serializable()
 class ContextModel(Model):
     def __init__(self, vocab_size, embedding_size):
         super(ContextModel, self).__init__()
@@ -91,36 +95,37 @@ if __name__ == "__main__":
         dims = config["dims"]
         batch_size = 128 
         epochs = 5 
+    
         # Configuración según la selección del corpus
         if corpus_choice == "1":
             dataset_path = "materiales/game_of_thrones.txt"
             target_words_path = "materiales/target_words_game_of_thrones.txt"
-            model_name = f"embeddings/contextModel/word_embedding_model_game_of_thrones_win{ventana}_dim{dims}.keras"
-            plot_filename = f"plots/contextModel/tsne_embeddings_game_of_thrones_win{ventana}_dim{dims}.png"
-            cosine_filename = f"cosine/contextModel/cosine_similarities_game_of_thrones_win{ventana}_dim{dims}.txt"
+            model_name = f"embeddings/contextModel/{corpus_choice}_win{ventana}_dim{dims}.keras"
+            plot_filename = f"plots/contextModel/{corpus_choice}_win{ventana}_dim{dims}.png"
+            cosine_filename = f"cosine/contextModel/{corpus_choice}_win{ventana}_dim{dims}.txt"
             
         elif corpus_choice == "2":
             dataset_path = "materiales/harry_potter_and_the_philosophers_stone.txt"
             target_words_path = "materiales/target_words_harry_potter.txt"
-            model_name = f"embeddings/contextModel/word_embedding_model_harry_potter_win{ventana}_dim{dims}.keras"
-            plot_filename = f"plots/contextModel/tsne_embeddings_harry_potter_win{ventana}_dim{dims}.png"
-            cosine_filename = f"cosine/contextModel/cosine_similarities_harry_potter_win{ventana}_dim{dims}.txt"
+            model_name = f"embeddings/contextModel/{corpus_choice}_win{ventana}_dim{dims}.keras"
+            plot_filename = f"plots/contextModel/{corpus_choice}_win{ventana}_dim{dims}.png"
+            cosine_filename = f"cosine/contextModel/{corpus_choice}_win{ventana}_dim{dims}.txt"
             
         elif corpus_choice == "3":
             dataset_path = "materiales/the_fellowship_of_the_ring.txt"
             target_words_path = "materiales/target_words_the_fellowship_of_the_ring.txt"
-            model_name = f"embeddings/contextModel/word_embedding_model_the_fellowship_of_the_ring_win{ventana}_dim{dims}.keras"
-            plot_filename = f"plots/contextModel/tsne_embeddings_the_fellowship_of_the_ring_win{ventana}_dim{dims}.png"
-            cosine_filename = f"cosine/contextModel/cosine_similarities_the_fellowship_of_the_ring_win{ventana}_dim{dims}.txt"
+            model_name = f"embeddings/contextModel/{corpus_choice}_win{ventana}_dim{dims}.keras"
+            plot_filename = f"plots/contextModel/{corpus_choice}_win{ventana}_dim{dims}.png"
+            cosine_filename = f"cosine/contextModel/{corpus_choice}_win{ventana}_dim{dims}.txt"
             
         elif corpus_choice == "4":
             dataset_path = "materiales/text8.txt"
             target_words_path = "p2/materiales/target_words_text8.txt"
-            model_name = f"embeddings/contextModel/word_embedding_text8_win{ventana}_dim{dims}.keras"
-            plot_filename = f"plots/contextModel/tsne_embeddings_text8_win{ventana}_dim{dims}.png"
-            cosine_filename = f"cosine/contextModel/cosine_similarities_text8_win{ventana}_dim{dims}.txt"
+            model_name = f"embeddings/contextModel/{corpus_choice}_win{ventana}_dim{dims}.keras"
+            plot_filename = f"plots/contextModel/{corpus_choice}_win{ventana}_dim{dims}.png"
+            cosine_filename = f"cosine/contextModel/{corpus_choice}_win{ventana}_dim{dims}.txt"
             batch_size = 1024  
-            epochs = 20       
+            epochs = 20    
             
         else:
             raise ValueError("Selección no válida. Introduce 1, 2, 3 ó 4.")
@@ -139,29 +144,24 @@ if __name__ == "__main__":
         tokenizer = Tokenizer()
         tokenizer.fit_on_texts([text])
         word_index = tokenizer.word_index
-        vocab_size = len(word_index) + 1  # +1 para el token de padding
+        vocab_size = len(word_index) +1  # +1 para el token de padding
+        # Crear una lista de palabras ordenadas por su índice
+        vocab = [""] * (len(word_index) + 1)  # +1 porque los índices empiezan en 1
+        for word, idx in word_index.items():
+            vocab[idx] = word
 
         # Convertir el texto a secuencia de tokens
         tokenized_text = tokenizer.texts_to_sequences([text])[0]
         target_indexes = {word_index[word] for word in target_words if word in word_index}  # Convertir target a índices
 
-        # Diccionario de mapeo de índices a palabras
-        word_map = {v: k for k, v in word_index.items()}
-
+        
+        
         # Generar pares de entrenamiento
         pairs, labels = create_training_pairs(tokenized_text, target_indexes, vocab_size, window_size)
 
-        # Guardar los primeros 20 pares en un archivo de texto
-        with open("training_pairs.txt", "w") as f:
-            for i in range(min(100, len(pairs))):
-                word_pair = (word_map.get(pairs[i][0], str(pairs[i][0])), word_map.get(pairs[i][1], str(pairs[i][1])))
-                f.write(f"Par: {word_pair}, Label: {labels[i]}\n")
+       
         # Mostrar información sobre los datos de entrenamiento
-        print(f"Vocabulario: {len(word_index)} palabras únicas")
-        print(f"Número de secuencias de entrenamiento: {len(pairs)}")
-        print(f"Forma de X: {pairs.shape}")
-        print(f"Forma de y: {labels.shape}")
-
+        
         # Construir y compilar el modelo
         model = ContextModel(vocab_size, dims)
         model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
@@ -171,7 +171,31 @@ if __name__ == "__main__":
 
         # Separar los pares en dos entradas: palabra objetivo y palabra de contexto
         input_targets, input_contexts = pairs[:, 0], pairs[:, 1]
+        embeddings = model.get_layer('embedding_context').get_weights()[0]
+        word = "years"
+        if word in word_index:
+            word_idx = word_index[word]
+            word_embedding = embeddings[word_idx]
+            print(f"Embedding para '{word}': {word_embedding}")
+        else:
+            print(f"'{word}' no está en el vocabulario")
+        # Visualizar los embeddings de las palabras objetivo
+        visualize_tsne_embeddings(
+            words=target_words,  # Lista de palabras objetivo
+            embeddings=embeddings,  # Embeddings entrenados
+            word_index=word_index,
+            
+            filename=plot_filename[:-4] +"noFitnoNeg.png" # Guardar la visualización en un archivo
+        )
 
+        visualize_all_tsne_embeddings(
+            embeddings=embeddings,  # Array numpy con todos los embeddings
+            word_index=word_index,        # Diccionario {word: idx}
+            words_to_plot=None,           # None = plotear todo el vocabulario
+            words_to_label=target_words,
+            filename=plot_filename[:-4] +"noFitnoNegALL.png"
+        )
+        
         # Definir hiperparámetros de entrenamiento
         batch_size = 64
         epochs = 5  # Puedes aumentar si quieres mejor rendimiento
@@ -188,7 +212,6 @@ if __name__ == "__main__":
         # Guardar el modelo entrenado
         model.save(model_name)
 
-        # Obtener los embeddings entrenados
         embeddings = model.get_layer('embedding_context').get_weights()[0]
 
         # Visualizar los embeddings de las palabras objetivo
@@ -196,22 +219,23 @@ if __name__ == "__main__":
             words=target_words,  # Lista de palabras objetivo
             embeddings=embeddings,  # Embeddings entrenados
             word_index=word_index,
-            window=2*ventana+1,
-            dims=dims,  # Diccionario de palabras a índices
-            filename=plot_filename # Guardar la visualización en un archivo
+            
+            filename=plot_filename[:-4] +"noNeg.png" # Guardar la visualización en un archivo
         )
-
+        visualize_all_tsne_embeddings(
+            embeddings=embeddings,  # Array numpy con todos los embeddings
+            word_index=word_index,        # Diccionario {word: idx}
+            words_to_plot=None,           # None = plotear todo el vocabulario
+            words_to_label=target_words,
+            filename=plot_filename[:-4] +"noNegALL.png"
+        )
         # Calcular similitudes de coseno
         cosine_results = compute_cosine_similarities(target_words, word_index, embeddings)
 
-        # Imprimir similitudes de coseno
-        print("\nSimilitudes de coseno:")
-        for target_word, similar_words in cosine_results.items():
-            print(f"Palabras más similares a '{target_word}':")
-            for word, similarity in similar_words:
-                print(f"  {word}: {similarity:.4f}")
-            print()
-
+       
     # Crear directorio si no existe
         save_cosine_similarities(cosine_results, cosine_filename)
-        print(f"Similitudes de coseno guardadas en '{cosine_filename}'.")
+        
+
+        print(len(word_index))
+        print(len(embeddings))

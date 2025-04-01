@@ -6,18 +6,7 @@ from tensorflow.keras.models import load_model
 
 # Función para calcular la similitud del coseno
 def compute_cosine_similarities(target_words, word_index, embedding_weights, top_n=10):
-    """
-    Calcula las similitudes de coseno entre las palabras objetivo y todas las demás palabras en el vocabulario.
-
-    Args:
-        target_words (list): Lista de palabras objetivo.
-        word_index (dict): Diccionario que mapea palabras a índices.
-        embedding_weights (numpy.ndarray): Pesos de la capa de embedding (vocab_size, embedding_size).
-        top_n (int): Número de palabras más similares a devolver para cada palabra objetivo.
-
-    Returns:
-        dict: Un diccionario donde las claves son las palabras objetivo y los valores son listas de tuplas (palabra, similitud).
-    """
+    
     results = {}
     
     # Crear mapeo inverso index -> word
