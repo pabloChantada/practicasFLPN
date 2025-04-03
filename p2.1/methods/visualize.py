@@ -3,7 +3,7 @@ from sklearn.manifold import TSNE
 from cosine_sim import main as visualize_args
 import numpy as np
 
-def visualize_tsne_embeddings2(words, embeddings, word_index, filename=None):
+def visualize_tsne_embeddings_wikipedia(words, embeddings, word_index, filename=None):
     """
     Visualizes t-SNE embeddings of selected words.
 
@@ -41,7 +41,7 @@ def visualize_tsne_embeddings2(words, embeddings, word_index, filename=None):
         plt.show()
 
 
-def visualize_all_tsne_embeddings2(embeddings, word_index, words_to_plot, words_to_label=None, filename=None):
+def visualize_all_tsne_embeddings_wikipedia(embeddings, word_index, words_to_plot, words_to_label=None, filename=None):
     """
     Visualizes t-SNE embeddings of selected words with optional labeling.
 
