@@ -3,9 +3,6 @@ from sklearn.manifold import TSNE
 from cosine_sim import main as visualize_args
 import numpy as np
 
-
-
-
 def visualize_tsne_embeddings2(words, embeddings, word_index, filename=None):
     """
     Visualizes t-SNE embeddings of selected words.
@@ -96,10 +93,24 @@ def visualize_all_tsne_embeddings2(embeddings, word_index, words_to_plot, words_
 
 
 
+'''
+Funciones propias para visualizar embeddings de palabras usando t-SNE.
+'''
 def visualize_tsne_embeddings(words, embeddings, word_index, filename=None, 
-                            perplexity=30, random_state=42):
+                             perplexity=30, random_state=42):
     """
-    Visualiza solo las palabras especificadas, pero usando como contexto TODOS los embeddings.
+    Visualiza embeddings de palabras seleccionadas en el contexto de todos los embeddings.
+    
+    Aplica t-SNE a todos los embeddings primero,
+    pero solo muestra y etiqueta las palabras especificadas.
+
+    Args:
+        words (list): Lista de palabras a visualizar y etiquetar.
+        embeddings (numpy.ndarray): Array que contiene todos los embeddings.
+        word_index (dict): Mapeo de palabras a sus índices en el array de embeddings.
+        filename (str, optional): Archivo para guardar la visualización. 
+        perplexity (int): Parámetro de perplexidad para t-SNE.
+        random_state (int): Semilla para reproducibilidad.
     """
     # Aplicar t-SNE a todos los embeddings primero (para consistencia)
     tsne = TSNE(n_components=2, perplexity=perplexity, random_state=random_state)
@@ -109,17 +120,19 @@ def visualize_tsne_embeddings(words, embeddings, word_index, filename=None,
     indices = [word_index[word] for word in words if word in word_index]
     selected_reduced = all_reduced[indices]
     
-    # Plot
+    # Crear visualización
     plt.figure(figsize=(10, 10))
     for i, word in enumerate(words):
         if word in word_index:
-            plt.scatter(selected_reduced[i, 0], selected_reduced[i, 1])
+            idx = indices[i]
+            plt.scatter(all_reduced[idx, 0], all_reduced[idx, 1])
             plt.annotate(word, 
-                         xy=(selected_reduced[i, 0], selected_reduced[i, 1]), 
+                         xy=(all_reduced[idx, 0], all_reduced[idx, 1]), 
                          xytext=(5, 2),
                          textcoords='offset points', 
                          ha='right', va='bottom')
     
+    # Guardar o mostrar el gráfico
     if filename:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
     else:
@@ -130,10 +143,24 @@ def visualize_all_tsne_embeddings(embeddings, word_index, words_to_plot=None, ta
                                 words_to_label=None, filename=None,
                                 perplexity=30, random_state=42):
     """
-    Visualiza todas las palabras pero solo etiqueta las especificadas.
-    Usa los mismos parámetros t-SNE que la primera función para consistencia.
+    Visualiza todos los embeddings con etiquetado selectivo.
+    
+    Muestra todo el espacio de embeddings pero solo etiqueta
+    palabras específicas para mejor visualización.
+
+    Args:
+        embeddings (numpy.ndarray): Array que contiene todos los embeddings.
+        word_index (dict): Mapeo de palabras a sus índices en el array de embeddings.
+        words_to_plot (list, optional): Lista de palabras a graficar. Si es None, 
+                                       se grafican todas las palabras.
+        target_words (list, optional): Lista de palabras objetivo a resaltar.
+        words_to_label (list, optional): Lista de palabras a etiquetar. Si es None,
+                                        se usan target_words.
+        filename (str, optional): Archivo para guardar la visualización.
+        perplexity (int): Parámetro de perplexidad para t-SNE.
+        random_state (int): Semilla para reproducibilidad.
     """
-    # Aplicar t-SNE (con los mismos parámetros que la otra función)
+    # Aplicar t-SNE a todos los embeddings
     tsne = TSNE(n_components=2, perplexity=perplexity, random_state=random_state)
     all_reduced = tsne.fit_transform(embeddings)
     
@@ -144,17 +171,14 @@ def visualize_all_tsne_embeddings(embeddings, word_index, words_to_plot=None, ta
     if words_to_label is None:
         words_to_label = target_words
         
-    indices_to_plot = [word_index[word] for word in words_to_plot if word in word_index]
-    
-    
-    # Plot
+    # Crear visualización
     plt.figure(figsize=(12, 12))
     
-    # Primero graficar todas las palabras en gris
+    # Primero graficar todas las palabras en gris claro (fondo)
     plt.scatter(all_reduced[:, 0], all_reduced[:, 1], c='lightgray', alpha=0.3, s=10)
     
-    # Luego graficar las palabras seleccionadas
-    for i, word in enumerate(words_to_plot):
+    # Luego graficar y etiquetar las palabras seleccionadas
+    for word in words_to_plot:
         if word in word_index and word in words_to_label:
             idx = word_index[word]
             plt.scatter(all_reduced[idx, 0], all_reduced[idx, 1], c='blue', alpha=0.7, s=50)
@@ -165,6 +189,7 @@ def visualize_all_tsne_embeddings(embeddings, word_index, words_to_plot=None, ta
                          ha='right',
                          va='bottom')
 
+    # Guardar o mostrar el gráfico
     if filename:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
     else:

@@ -174,3 +174,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 flpn_env/
+/p2.1/cosine/cosine
