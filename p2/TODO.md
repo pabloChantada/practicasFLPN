@@ -6,3 +6,6 @@
     - Similitud coseno entre palabras (hacer codigo) -> Los imprime los modelos al acabar y también están en la carpeta cosine 
 4. Usar texto opcional -> Hay que hacer esta vaina 🔥🔥🔥🔥🔥🔥
 
+-----------------------------------
+
+- Que quiere que le subamos en el campus ? Los 4 archivos y la memoria o algo mas

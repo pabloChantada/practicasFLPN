@@ -1,0 +1,552 @@
+Palabras más similares a 'sauron':
+  caught: 0.7730
+  mused: 0.7683
+  song: 0.7659
+  stooping: 0.7657
+  built: 0.7632
+  crickhollow: 0.7483
+  look: 0.7415
+  fades: 0.7363
+  obviously: 0.7328
+  howls: 0.7327
+
+Palabras más similares a 'he':
+  tales: 0.8773
+  sat: 0.8719
+  asked: 0.8711
+  but: 0.8675
+  sam: 0.8626
+  it: 0.8572
+  see: 0.8566
+  pippin: 0.8536
+  answered: 0.8492
+  stream: 0.8432
+
+Palabras más similares a 'gimli':
+  sternly: 0.4993
+  together: 0.4788
+  aloud: 0.4718
+  tone: 0.4571
+  elrond: 0.4490
+  steel: 0.4430
+  ponyhe: 0.4366
+  cheerfully: 0.4166
+  he: 0.4093
+  runs: 0.4083
+
+Palabras más similares a 'man':
+  snout: 0.9282
+  instruct: 0.9198
+  fleets: 0.9155
+  haze: 0.9130
+  saurons: 0.9110
+  welloff: 0.9110
+  bucklander: 0.9097
+  thronged: 0.9081
+  firework: 0.9072
+  snail: 0.9069
+
+Palabras más similares a 'brave':
+  tooth: 0.9259
+  whipped: 0.9216
+  shunned: 0.9213
+  rowans: 0.9184
+  bewildering: 0.9180
+  companionship: 0.9176
+  casts: 0.9175
+  scales: 0.9147
+  tighten: 0.9143
+  joking: 0.9141
+
+Palabras más similares a 'wolf':
+  raincurtain: 0.8746
+  wagging: 0.8737
+  snarls: 0.8613
+  survived: 0.8602
+  relations: 0.8602
+  region: 0.8599
+  block: 0.8587
+  filed: 0.8577
+  mould: 0.8569
+  settling: 0.8561
+
+Palabras más similares a 'eagle':
+  inquisitive: 0.9468
+  stirrups: 0.9277
+  ily: 0.9256
+  keeping: 0.9237
+  builded: 0.9222
+  slumped: 0.9210
+  pen: 0.9207
+  dwarfcandles: 0.9207
+  appealingly: 0.9202
+  eighty: 0.9199
+
+Palabras más similares a 'she':
+  mr: 0.8587
+  looking: 0.8398
+  i: 0.8207
+  laughing: 0.8149
+  even: 0.8014
+  pulling: 0.7984
+  do: 0.7945
+  about: 0.7868
+  ignoring: 0.7769
+  lying: 0.7769
+
+Palabras más similares a 'ran':
+  himself: 0.8440
+  ought: 0.8268
+  set: 0.8250
+  should: 0.8250
+  came: 0.8249
+  rings: 0.8238
+  blew: 0.8234
+  alone: 0.8215
+  all: 0.8164
+  chose: 0.8006
+
+Palabras más similares a 'happy':
+  system: 0.9240
+  restlessly: 0.9139
+  easygoing: 0.9104
+  event: 0.9095
+  ettendales: 0.9070
+  stirrups: 0.9061
+  kindler: 0.9052
+  befall: 0.9036
+  column: 0.9024
+  combat: 0.9018
+
+Palabras más similares a 'one':
+  a: 0.9267
+  the: 0.9232
+  and: 0.8747
+  of: 0.8621
+  to: 0.8601
+  this: 0.8542
+  their: 0.8467
+  are: 0.8453
+  nights: 0.8444
+  magic: 0.8373
+
+Palabras más similares a 'run':
+  reckoned: 0.8837
+  too: 0.8791
+  two: 0.8697
+  friends: 0.8603
+  moria: 0.8573
+  seldom: 0.8532
+  approached: 0.8383
+  boned: 0.8334
+  preferred: 0.8324
+  anew: 0.8257
+
+Palabras más similares a 'speak':
+  proposal: 0.4944
+  armoured: 0.4861
+  mirkwood: 0.4757
+  lips: 0.4716
+  clutched: 0.4644
+  damp: 0.4642
+  brow: 0.4633
+  independent: 0.4571
+  died: 0.4558
+  rapidly: 0.4556
+
+Palabras más similares a 'fight':
+  milo: 0.9252
+  plashing: 0.9241
+  yassen: 0.9174
+  doomed: 0.9149
+  revived: 0.9128
+  merciless: 0.9111
+  allied: 0.9110
+  timber: 0.9098
+  dense: 0.9090
+  driftwood: 0.9084
+
+Palabras más similares a 'bilbo':
+  it: 0.8368
+  exclaimed: 0.8346
+  see: 0.8209
+  suddenly: 0.8209
+  never: 0.8206
+  darkness: 0.8204
+  slowly: 0.8199
+  woke: 0.8144
+  asked: 0.8113
+  answered: 0.8100
+
+Palabras más similares a 'dwarf':
+  lightly: 0.6275
+  waters: 0.5065
+  ponyhe: 0.5060
+  perilto: 0.5022
+  little: 0.5021
+  dol: 0.4766
+  hinge: 0.4598
+  andril: 0.4574
+  heavily: 0.4552
+  dillo: 0.4518
+
+Palabras más similares a 'hobbit':
+  revenge: 0.6720
+  isnt: 0.6702
+  gazed: 0.6662
+  overheard: 0.6392
+  tell: 0.6354
+  letter: 0.6351
+  hid: 0.6344
+  asked: 0.6334
+  said: 0.6306
+  exclaimed: 0.6262
+
+Palabras más similares a 'two':
+  approached: 0.9077
+  too: 0.8831
+  path: 0.8788
+  run: 0.8697
+  anxiously: 0.8617
+  seldom: 0.8614
+  cold: 0.8541
+  reckoned: 0.8509
+  friends: 0.8433
+  sir: 0.8328
+
+Palabras más similares a 'fought':
+  dense: 0.9255
+  anyone: 0.9230
+  chiefly: 0.9203
+  notice: 0.9186
+  thrice: 0.9186
+  hobbitrooms: 0.9177
+  shafts: 0.9166
+  pocked: 0.9143
+  hillock: 0.9142
+  landed: 0.9126
+
+Palabras más similares a 'forest':
+  woke: 0.9355
+  as: 0.9297
+  became: 0.9205
+  suddenly: 0.9191
+  put: 0.9189
+  brandywine: 0.9164
+  stood: 0.9156
+  light: 0.9132
+  exclaimed: 0.9102
+  indeed: 0.9097
+
+Palabras más similares a 'spoke':
+  woke: 0.9034
+  politely: 0.9002
+  flash: 0.8933
+  refused: 0.8924
+  forest: 0.8918
+  became: 0.8868
+  hesitated: 0.8867
+  indeed: 0.8855
+  suddenly: 0.8853
+  us: 0.8840
+
+Palabras más similares a 'mountain':
+  rousing: 0.9112
+  trick: 0.9103
+  buzzing: 0.9096
+  appoint: 0.9091
+  thag: 0.9083
+  temptation: 0.9081
+  stumps: 0.9076
+  contain: 0.9073
+  retirement: 0.9061
+  included: 0.9059
+
+Palabras más similares a 'sword':
+  climbed: 0.6783
+  hastened: 0.6716
+  sees: 0.6491
+  riddle: 0.6335
+  needed: 0.6335
+  bard: 0.6312
+  travel: 0.6281
+  basket: 0.6206
+  snake: 0.6204
+  pocketses: 0.6150
+
+Palabras más similares a 'wizard':
+  paddle: 0.9343
+  suspects: 0.9338
+  crebain: 0.9337
+  flashed: 0.9332
+  fraught: 0.9286
+  glinted: 0.9272
+  thronged: 0.9272
+  fro: 0.9250
+  rills: 0.9242
+  fifteen: 0.9241
+
+Palabras más similares a 'ring':
+  after: 0.7859
+  for: 0.7762
+  thing: 0.7704
+  be: 0.7457
+  summers: 0.7429
+  seen: 0.7401
+  sign: 0.7336
+  time: 0.7289
+  myself: 0.7269
+  side: 0.7214
+
+Palabras más similares a 'orc':
+  restlessness: 0.9207
+  elvenstring: 0.9196
+  throne: 0.9186
+  bark: 0.9174
+  consulting: 0.9166
+  gorgor: 0.9145
+  band: 0.9099
+  darn: 0.9099
+  elventears: 0.9095
+  spite: 0.9090
+
+Palabras más similares a 'elf':
+  dashed: 0.6992
+  bad: 0.6000
+  baggins: 0.5365
+  otherwise: 0.5352
+  stammered: 0.5331
+  escaped: 0.4898
+  found: 0.4681
+  bade: 0.4594
+  met: 0.4510
+  books: 0.4458
+
+Palabras más similares a 'sad':
+  lugged: 0.9353
+  barred: 0.9283
+  beds: 0.9256
+  halfguessed: 0.9251
+  aforetime: 0.9249
+  breeand: 0.9225
+  ignored: 0.9211
+  growth: 0.9207
+  nuisance: 0.9202
+  supplies: 0.9201
+
+Palabras más similares a 'goblin':
+  minas: 0.9270
+  meriadoc: 0.9253
+  watchful: 0.9222
+  andn: 0.9215
+  doomed: 0.9200
+  ferryboat: 0.9190
+  lashing: 0.9154
+  efforts: 0.9145
+  expelled: 0.9132
+  nuisance: 0.9123
+
+Palabras más similares a 'saruman':
+  reckoned: 0.8464
+  remembered: 0.8377
+  boned: 0.8154
+  obviously: 0.8148
+  too: 0.8146
+  preferred: 0.8055
+  howls: 0.8053
+  fact: 0.7976
+  knew: 0.7940
+  moria: 0.7917
+
+Palabras más similares a 'spider':
+  knotted: 0.9401
+  few: 0.9398
+  stale: 0.9387
+  stolen: 0.9369
+  dwarfcandles: 0.9361
+  members: 0.9356
+  dire: 0.9339
+  gum: 0.9337
+  those: 0.9317
+  fastness: 0.9313
+
+Palabras más similares a 'frodo':
+  on: 0.9419
+  them: 0.9350
+  down: 0.9329
+  who: 0.9300
+  it: 0.9298
+  were: 0.9280
+  then: 0.9259
+  if: 0.9246
+  by: 0.9245
+  answered: 0.9244
+
+Palabras más similares a 'angry':
+  pointing: 0.8854
+  each: 0.8810
+  see: 0.8721
+  plainly: 0.8695
+  stood: 0.8681
+  pippin: 0.8634
+  panted: 0.8623
+  exclaimed: 0.8572
+  stream: 0.8570
+  better: 0.8498
+
+Palabras más similares a 'four':
+  woe: 0.9134
+  blackberry: 0.9121
+  skill: 0.9053
+  rory: 0.9044
+  lifting: 0.9035
+  crawling: 0.9015
+  veered: 0.9015
+  fierceness: 0.8999
+  lap: 0.8996
+  poignant: 0.8988
+
+Palabras más similares a 'horse':
+  every: 0.6060
+  above: 0.5542
+  uneasy: 0.5468
+  world: 0.5321
+  end: 0.5105
+  anvil: 0.4967
+  tale: 0.4845
+  cast: 0.4835
+  servant: 0.4663
+  watched: 0.4581
+
+Palabras más similares a 'aragorn':
+  moria: 0.8156
+  end: 0.8146
+  reckoned: 0.7945
+  remembered: 0.7934
+  window: 0.7833
+  too: 0.7828
+  folk: 0.7737
+  friends: 0.7727
+  preferred: 0.7641
+  watched: 0.7601
+
+Palabras más similares a 'walk':
+  walkingparty: 0.5733
+  old: 0.5690
+  cheerylooking: 0.5638
+  liked: 0.5541
+  a: 0.5526
+  bobbed: 0.5249
+  respectable: 0.5199
+  itself: 0.5095
+  dearly: 0.5087
+  wailing: 0.5086
+
+Palabras más similares a 'three':
+  became: 0.7558
+  pippin: 0.7353
+  crushed: 0.7338
+  myself: 0.7338
+  think: 0.7324
+  set: 0.7225
+  ought: 0.7206
+  hand: 0.7153
+  though: 0.7150
+  light: 0.7148
+
+Palabras más similares a 'gandalf':
+  got: 0.9092
+  so: 0.9050
+  which: 0.9026
+  here: 0.9002
+  than: 0.8980
+  were: 0.8977
+  rings: 0.8971
+  ought: 0.8920
+  if: 0.8911
+  put: 0.8908
+
+Palabras más similares a 'travel':
+  news: 0.8277
+  needed: 0.8021
+  basket: 0.7925
+  party: 0.7910
+  stretched: 0.7891
+  laid: 0.7889
+  bard: 0.7863
+  firstborn: 0.7843
+  wells: 0.7728
+  thick: 0.7679
+
+Palabras más similares a 'shire':
+  isnt: 0.6539
+  tom: 0.6446
+  neither: 0.6159
+  said: 0.6148
+  shoulder: 0.6140
+  revenge: 0.6131
+  faintly: 0.6131
+  overheard: 0.6103
+  joyfully: 0.6089
+  flies: 0.6086
+
+Palabras más similares a 'shield':
+  bit: 0.8121
+  hearth: 0.8011
+  awoke: 0.7866
+  firstborn: 0.7850
+  collected: 0.7814
+  ached: 0.7785
+  plants: 0.7715
+  hands: 0.7659
+  touch: 0.7653
+  nmenor: 0.7651
+
+Palabras más similares a 'sam':
+  muttered: 0.8705
+  he: 0.8626
+  sat: 0.8421
+  stopped: 0.8304
+  fear: 0.8267
+  while: 0.8077
+  darkness: 0.8040
+  called: 0.8024
+  see: 0.8020
+  both: 0.7991
+
+Palabras más similares a 'woman':
+  book: 0.9490
+  greater: 0.9442
+  gape: 0.9433
+  nuisance: 0.9431
+  dwarfcandles: 0.9410
+  growth: 0.9410
+  goldberrys: 0.9409
+  stirrups: 0.9404
+  aforetime: 0.9394
+  knotted: 0.9388
+
+Palabras más similares a 'mordor':
+  tea: 0.8973
+  brought: 0.8908
+  foam: 0.8880
+  sound: 0.8847
+  peered: 0.8827
+  wielded: 0.8812
+  says: 0.8785
+  presently: 0.8761
+  wore: 0.8733
+  lunch: 0.8727
+
+Palabras más similares a 'legolas':
+  months: 0.8384
+  firebrand: 0.8211
+  latest: 0.8171
+  lamps: 0.7997
+  legs: 0.7990
+  trail: 0.7824
+  steep: 0.7799
+  huge: 0.7758
+  courses: 0.7654
+  tinderboxes: 0.7629
+

@@ -1,0 +1,588 @@
+Palabras más similares a 'girl':
+  uncle: 0.8969
+  hed: 0.8953
+  you: 0.8931
+  hagrid: 0.8921
+  your: 0.8898
+  an: 0.8898
+  sit: 0.8897
+  he: 0.8897
+  yeah: 0.8896
+  fang: 0.8896
+
+Palabras más similares a 'sad':
+  complex: 0.4437
+  enid: 0.3923
+  bundled: 0.3810
+  wheel: 0.3784
+  sunshine: 0.3765
+  needles: 0.3748
+  fetchin: 0.3727
+  snoozing: 0.3712
+  double: 0.3699
+  slightest: 0.3684
+
+Palabras más similares a 'said':
+  and: 0.9969
+  to: 0.9967
+  had: 0.9963
+  at: 0.9961
+  was: 0.9952
+  on: 0.9948
+  his: 0.9948
+  didnt: 0.9948
+  could: 0.9947
+  that: 0.9946
+
+Palabras más similares a 'malfoy':
+  you: 0.9887
+  ron: 0.9887
+  he: 0.9886
+  the: 0.9886
+  no: 0.9878
+  i: 0.9877
+  harry: 0.9872
+  she: 0.9872
+  then: 0.9867
+  professor: 0.9865
+
+Palabras más similares a 'forest':
+  vernon: 0.9106
+  anything: 0.9040
+  professor: 0.9013
+  when: 0.9007
+  day: 0.8981
+  looking: 0.8978
+  have: 0.8972
+  this: 0.8963
+  that: 0.8958
+  sometimes: 0.8956
+
+Palabras más similares a 'she':
+  he: 0.9914
+  harry: 0.9910
+  hagrid: 0.9901
+  dumbledore: 0.9888
+  your: 0.9876
+  you: 0.9876
+  malfoy: 0.9872
+  ron: 0.9867
+  professor: 0.9864
+  wood: 0.9858
+
+Palabras más similares a 'ran':
+  that: 0.9628
+  not: 0.9621
+  supposed: 0.9615
+  have: 0.9612
+  go: 0.9612
+  at: 0.9609
+  couldnt: 0.9607
+  was: 0.9604
+  had: 0.9602
+  know: 0.9598
+
+Palabras más similares a 'owl':
+  felt: 0.9258
+  back: 0.9226
+  in: 0.9221
+  them: 0.9220
+  dudley: 0.9215
+  out: 0.9205
+  a: 0.9205
+  there: 0.9203
+  his: 0.9203
+  spoke: 0.9202
+
+Palabras más similares a 'spoke':
+  back: 0.9813
+  down: 0.9789
+  had: 0.9784
+  what: 0.9781
+  was: 0.9777
+  to: 0.9777
+  that: 0.9772
+  left: 0.9771
+  looked: 0.9770
+  on: 0.9768
+
+Palabras más similares a 'hermione':
+  ron: 0.9931
+  he: 0.9926
+  you: 0.9912
+  harry: 0.9911
+  i: 0.9906
+  the: 0.9904
+  in: 0.9903
+  one: 0.9903
+  this: 0.9900
+  hagrid: 0.9899
+
+Palabras más similares a 'two':
+  professor: 0.9768
+  there: 0.9751
+  the: 0.9750
+  i: 0.9741
+  you: 0.9741
+  they: 0.9737
+  so: 0.9736
+  but: 0.9733
+  all: 0.9727
+  we: 0.9727
+
+Palabras más similares a 'cat':
+  training: 0.7618
+  lesson: 0.7499
+  hungry: 0.7421
+  nice: 0.7342
+  slept: 0.7269
+  carefully: 0.7259
+  really: 0.7252
+  archway: 0.7226
+  wondered: 0.7220
+  screamed: 0.7218
+
+Palabras más similares a 'woman':
+  she: 0.9164
+  here: 0.9130
+  malfoy: 0.9128
+  dont: 0.9119
+  so: 0.9114
+  me: 0.9111
+  a: 0.9107
+  broomstick: 0.9107
+  then: 0.9102
+  got: 0.9087
+
+Palabras más similares a 'muggle':
+  over: 0.9140
+  who: 0.9128
+  never: 0.9099
+  very: 0.9098
+  more: 0.9089
+  here: 0.9088
+  hadnt: 0.9088
+  could: 0.9085
+  wanted: 0.9084
+  read: 0.9082
+
+Palabras más similares a 'wizard':
+  harrys: 0.9440
+  about: 0.9439
+  could: 0.9431
+  called: 0.9420
+  down: 0.9419
+  hadnt: 0.9417
+  his: 0.9412
+  didnt: 0.9411
+  told: 0.9403
+  might: 0.9398
+
+Palabras más similares a 'witch':
+  shop: 0.9041
+  your: 0.8984
+  vernon: 0.8970
+  first: 0.8961
+  uncle: 0.8950
+  boy: 0.8941
+  mcgonagall: 0.8933
+  gringotts: 0.8932
+  are: 0.8923
+  feeling: 0.8918
+
+Palabras más similares a 'boy':
+  he: 0.9874
+  ron: 0.9867
+  you: 0.9864
+  uncle: 0.9860
+  professor: 0.9849
+  harry: 0.9848
+  hagrid: 0.9846
+  me: 0.9841
+  this: 0.9836
+  a: 0.9836
+
+Palabras más similares a 'wand':
+  never: 0.9571
+  a: 0.9569
+  this: 0.9561
+  just: 0.9553
+  because: 0.9551
+  what: 0.9544
+  then: 0.9544
+  that: 0.9539
+  they: 0.9536
+  at: 0.9535
+
+Palabras más similares a 'harry':
+  he: 0.9970
+  hagrid: 0.9960
+  ron: 0.9942
+  you: 0.9937
+  professor: 0.9932
+  dumbledore: 0.9930
+  hermione: 0.9911
+  she: 0.9910
+  mcgonagall: 0.9900
+  im: 0.9885
+
+Palabras más similares a 'he':
+  harry: 0.9970
+  ron: 0.9965
+  hagrid: 0.9961
+  you: 0.9952
+  dumbledore: 0.9942
+  professor: 0.9941
+  hermione: 0.9926
+  the: 0.9923
+  me: 0.9923
+  i: 0.9916
+
+Palabras más similares a 'voldemort':
+  noticed: 0.8818
+  train: 0.8812
+  sick: 0.8760
+  usually: 0.8732
+  started: 0.8666
+  silver: 0.8661
+  again: 0.8616
+  speak: 0.8610
+  spoke: 0.8608
+  already: 0.8608
+
+Palabras más similares a 'dursley':
+  do: 0.9733
+  me: 0.9726
+  his: 0.9703
+  got: 0.9699
+  now: 0.9698
+  snape: 0.9697
+  when: 0.9675
+  out: 0.9674
+  then: 0.9674
+  mr: 0.9674
+
+Palabras más similares a 'dog':
+  shook: 0.9092
+  granger: 0.9019
+  we: 0.9018
+  day: 0.9011
+  told: 0.9000
+  shouted: 0.8995
+  found: 0.8992
+  couldnt: 0.8980
+  looking: 0.8975
+  to: 0.8973
+
+Palabras más similares a 'dumbledore':
+  he: 0.9942
+  hagrid: 0.9932
+  ron: 0.9932
+  harry: 0.9930
+  you: 0.9920
+  hermione: 0.9896
+  professor: 0.9893
+  she: 0.9888
+  me: 0.9887
+  mcgonagall: 0.9882
+
+Palabras más similares a 'sorcerer':
+  bishop: 0.3947
+  shapes: 0.3787
+  cccant: 0.3723
+  recorded: 0.3666
+  squid: 0.3576
+  avoid: 0.3526
+  sweat: 0.3469
+  exasperated: 0.3458
+  crackpot: 0.3458
+  sides: 0.3455
+
+Palabras más similares a 'hagrid':
+  he: 0.9961
+  harry: 0.9960
+  ron: 0.9947
+  dumbledore: 0.9932
+  you: 0.9924
+  professor: 0.9920
+  she: 0.9901
+  hermione: 0.9899
+  mcgonagall: 0.9885
+  im: 0.9884
+
+Palabras más similares a 'angry':
+  whispered: 0.8903
+  tea: 0.8887
+  suddenly: 0.8864
+  go: 0.8858
+  could: 0.8843
+  was: 0.8841
+  thought: 0.8839
+  sure: 0.8835
+  catch: 0.8809
+  potter: 0.8809
+
+Palabras más similares a 'shouted':
+  tried: 0.9863
+  know: 0.9854
+  was: 0.9851
+  had: 0.9849
+  his: 0.9848
+  have: 0.9848
+  did: 0.9846
+  could: 0.9844
+  up: 0.9843
+  to: 0.9842
+
+Palabras más similares a 'hufflepuff':
+  and: 0.9651
+  on: 0.9635
+  be: 0.9631
+  said: 0.9624
+  room: 0.9613
+  to: 0.9606
+  at: 0.9603
+  another: 0.9601
+  it: 0.9598
+  him: 0.9590
+
+Palabras más similares a 'potter':
+  and: 0.9921
+  to: 0.9919
+  at: 0.9917
+  had: 0.9912
+  said: 0.9910
+  it: 0.9902
+  out: 0.9900
+  that: 0.9897
+  but: 0.9890
+  what: 0.9888
+
+Palabras más similares a 'stone':
+  for: 0.9394
+  when: 0.9388
+  we: 0.9387
+  to: 0.9378
+  i: 0.9370
+  it: 0.9362
+  about: 0.9357
+  me: 0.9355
+  the: 0.9355
+  them: 0.9352
+
+Palabras más similares a 'run':
+  did: 0.9657
+  to: 0.9655
+  could: 0.9649
+  his: 0.9644
+  said: 0.9643
+  it: 0.9641
+  didnt: 0.9641
+  get: 0.9640
+  of: 0.9639
+  was: 0.9636
+
+Palabras más similares a 'speak':
+  very: 0.9631
+  of: 0.9608
+  about: 0.9605
+  in: 0.9604
+  to: 0.9602
+  left: 0.9597
+  would: 0.9596
+  but: 0.9595
+  had: 0.9593
+  could: 0.9591
+
+Palabras más similares a 'kill':
+  all: 0.9776
+  dudley: 0.9769
+  him: 0.9760
+  his: 0.9759
+  that: 0.9756
+  it: 0.9754
+  how: 0.9754
+  just: 0.9750
+  as: 0.9748
+  tried: 0.9747
+
+Palabras más similares a 'gryffindor':
+  up: 0.9821
+  and: 0.9819
+  it: 0.9818
+  the: 0.9817
+  in: 0.9817
+  of: 0.9811
+  this: 0.9810
+  what: 0.9799
+  to: 0.9799
+  at: 0.9799
+
+Palabras más similares a 'three':
+  not: 0.9765
+  looked: 0.9753
+  asked: 0.9751
+  of: 0.9748
+  harrys: 0.9747
+  there: 0.9741
+  to: 0.9740
+  said: 0.9738
+  took: 0.9736
+  be: 0.9730
+
+Palabras más similares a 'happy':
+  found: 0.9243
+  off: 0.9210
+  knew: 0.9209
+  asked: 0.9196
+  felt: 0.9190
+  room: 0.9186
+  school: 0.9183
+  to: 0.9178
+  said: 0.9164
+  were: 0.9161
+
+Palabras más similares a 'lord':
+  ago: 0.7809
+  snitch: 0.7780
+  needed: 0.7703
+  vernon: 0.7670
+  woman: 0.7669
+  mr: 0.7668
+  leave: 0.7662
+  standing: 0.7637
+  lay: 0.7621
+  theyre: 0.7610
+
+Palabras más similares a 'ravenclaw':
+  two: 0.8945
+  hermione: 0.8938
+  one: 0.8906
+  us: 0.8905
+  really: 0.8885
+  people: 0.8882
+  there: 0.8875
+  yourself: 0.8874
+  the: 0.8871
+  ive: 0.8871
+
+Palabras más similares a 'person':
+  escaping: 0.4424
+  defense: 0.3960
+  sliding: 0.3899
+  surged: 0.3885
+  pursed: 0.3732
+  deal: 0.3643
+  conk: 0.3599
+  trained: 0.3575
+  wormwood: 0.3498
+  bending: 0.3409
+
+Palabras más similares a 'one':
+  ron: 0.9922
+  it: 0.9912
+  in: 0.9908
+  the: 0.9908
+  a: 0.9905
+  hermione: 0.9903
+  me: 0.9901
+  and: 0.9901
+  for: 0.9896
+  he: 0.9895
+
+Palabras más similares a 'four':
+  still: 0.9390
+  gryffindor: 0.9365
+  just: 0.9365
+  be: 0.9361
+  the: 0.9350
+  anything: 0.9347
+  with: 0.9346
+  it: 0.9341
+  of: 0.9336
+  hed: 0.9329
+
+Palabras más similares a 'people':
+  down: 0.9806
+  as: 0.9800
+  a: 0.9799
+  but: 0.9790
+  on: 0.9790
+  that: 0.9775
+  to: 0.9771
+  what: 0.9771
+  all: 0.9770
+  at: 0.9768
+
+Palabras más similares a 'fly':
+  like: 0.8707
+  whispered: 0.8683
+  caught: 0.8676
+  found: 0.8661
+  where: 0.8609
+  wondered: 0.8606
+  said: 0.8601
+  hadnt: 0.8601
+  behind: 0.8596
+  could: 0.8596
+
+Palabras más similares a 'man':
+  she: 0.8923
+  hagrid: 0.8851
+  uncle: 0.8843
+  voice: 0.8834
+  softly: 0.8805
+  he: 0.8804
+  harry: 0.8799
+  rubbish: 0.8742
+  dumbledore: 0.8720
+  boy: 0.8720
+
+Palabras más similares a 'slytherin':
+  a: 0.9811
+  but: 0.9809
+  on: 0.9806
+  and: 0.9802
+  all: 0.9800
+  it: 0.9794
+  one: 0.9791
+  so: 0.9790
+  the: 0.9787
+  his: 0.9786
+
+Palabras más similares a 'rat':
+  decided: 0.9028
+  em: 0.8862
+  asked: 0.8846
+  jumped: 0.8846
+  face: 0.8810
+  before: 0.8810
+  stared: 0.8796
+  sure: 0.8792
+  their: 0.8788
+  knew: 0.8780
+
+Palabras más similares a 'wood':
+  he: 0.9883
+  harry: 0.9875
+  hagrid: 0.9874
+  she: 0.9858
+  ron: 0.9856
+  you: 0.9851
+  i: 0.9841
+  professor: 0.9840
+  dumbledore: 0.9840
+  malfoy: 0.9836
+
+Palabras más similares a 'walk':
+  voice: 0.8276
+  gruffly: 0.8242
+  angrily: 0.8216
+  cant: 0.8215
+  big: 0.8206
+  mr: 0.8206
+  while: 0.8201
+  say: 0.8196
+  year: 0.8186
+  eh: 0.8185
+

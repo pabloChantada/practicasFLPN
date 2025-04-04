@@ -1,0 +1,588 @@
+Palabras más similares a 'ravenclaw':
+  against: 0.8625
+  gliding: 0.6981
+  best: 0.6924
+  drooling: 0.6819
+  mysterious: 0.6816
+  dumbledores: 0.6773
+  drumming: 0.6769
+  killing: 0.6703
+  pressed: 0.6694
+  bell: 0.6657
+
+Palabras más similares a 'angry':
+  decided: 0.9233
+  breathlessly: 0.8489
+  boy: 0.8446
+  explained: 0.8388
+  watched: 0.8342
+  turned: 0.8292
+  leaves: 0.8215
+  door: 0.8162
+  sick: 0.8104
+  relief: 0.8100
+
+Palabras más similares a 'walk':
+  transfigured: 0.8992
+  types: 0.8919
+  unseen: 0.8912
+  scamander: 0.8859
+  studyin: 0.8851
+  bottles: 0.8835
+  oaf: 0.8834
+  testing: 0.8789
+  twenty: 0.8785
+  ended: 0.8782
+
+Palabras más similares a 'two':
+  gringotts: 0.8270
+  often: 0.8265
+  wizard: 0.8203
+  quaffle: 0.8110
+  drumming: 0.8064
+  own: 0.8048
+  aunt: 0.8043
+  nodded: 0.7958
+  being: 0.7952
+  hut: 0.7930
+
+Palabras más similares a 'lord':
+  midnight: 0.9403
+  knuts: 0.9156
+  putting: 0.9115
+  barking: 0.9063
+  wow: 0.9042
+  okay: 0.9022
+  lump: 0.8992
+  draconis: 0.8943
+  tuesday: 0.8931
+  theyd: 0.8926
+
+Palabras más similares a 'wizard':
+  ear: 0.8789
+  somehow: 0.8725
+  ones: 0.8631
+  taken: 0.8600
+  boat: 0.8597
+  nodded: 0.8492
+  shared: 0.8454
+  eve: 0.8369
+  beard: 0.8354
+  hold: 0.8329
+
+Palabras más similares a 'slytherin':
+  everyone: 0.7824
+  thats: 0.7657
+  hagrid: 0.7642
+  nothing: 0.7638
+  goyle: 0.7600
+  aunt: 0.7524
+  shhhh: 0.7519
+  hut: 0.7487
+  beefy: 0.7469
+  ah: 0.7419
+
+Palabras más similares a 'owl':
+  football: 0.6331
+  fang: 0.6293
+  bit: 0.6220
+  yawned: 0.6190
+  jumping: 0.6162
+  rolled: 0.6059
+  sleepily: 0.6012
+  raised: 0.5865
+  growled: 0.5763
+  seeker: 0.5686
+
+Palabras más similares a 'woman':
+  closer: 0.6576
+  fluttered: 0.5286
+  crouched: 0.5185
+  password: 0.5047
+  trip: 0.4964
+  spent: 0.4831
+  prefect: 0.4786
+  arrival: 0.4671
+  baking: 0.4626
+  snuffling: 0.4615
+
+Palabras más similares a 'hufflepuff':
+  won: 0.8543
+  world: 0.8539
+  team: 0.8355
+  a: 0.8263
+  gryffindor: 0.8227
+  for: 0.8156
+  neighbors: 0.8086
+  evenings: 0.8078
+  school: 0.8064
+  threeheaded: 0.8064
+
+Palabras más similares a 'muggle':
+  enchantments: 0.8847
+  spell: 0.8490
+  nosie: 0.8459
+  witch: 0.8423
+  guess: 0.8324
+  dangerous: 0.8255
+  wands: 0.8219
+  coward: 0.8146
+  strength: 0.8105
+  quiet: 0.8080
+
+Palabras más similares a 'wood':
+  often: 0.9434
+  aunt: 0.9395
+  hagrid: 0.9026
+  uncle: 0.8977
+  hut: 0.8847
+  punching: 0.8759
+  malfoy: 0.8745
+  gringotts: 0.8732
+  us: 0.8732
+  percy: 0.8676
+
+Palabras más similares a 'girl':
+  sun: 0.7425
+  trolls: 0.7064
+  bottle: 0.6850
+  stolen: 0.6740
+  crate: 0.6655
+  whos: 0.6629
+  sounding: 0.6626
+  overtaking: 0.6608
+  climb: 0.6559
+  wind: 0.6541
+
+Palabras más similares a 'three':
+  climbed: 0.7537
+  unsticking: 0.7172
+  during: 0.7114
+  balls: 0.6911
+  ahead: 0.6858
+  money: 0.6834
+  inches: 0.6807
+  beechwood: 0.6764
+  only: 0.6665
+  thousand: 0.6656
+
+Palabras más similares a 'wand':
+  barrier: 0.8677
+  drive: 0.8216
+  stopped: 0.8107
+  spying: 0.8083
+  arguments: 0.8074
+  dursleys: 0.8043
+  doesnt: 0.7830
+  pretending: 0.7824
+  refereeing: 0.7809
+  dreamed: 0.7782
+
+Palabras más similares a 'stone':
+  alley: 0.8342
+  ever: 0.8314
+  bed: 0.8179
+  pleased: 0.8132
+  boy: 0.8055
+  oclock: 0.8027
+  felt: 0.7971
+  liked: 0.7950
+  angry: 0.7899
+  lost: 0.7896
+
+Palabras más similares a 'fly':
+  scored: 0.8661
+  staring: 0.8461
+  dodged: 0.8456
+  streaked: 0.8389
+  make: 0.8315
+  sheets: 0.8291
+  son: 0.8274
+  beak: 0.8125
+  envelope: 0.7990
+  darkly: 0.7978
+
+Palabras más similares a 'hagrid':
+  filch: 0.9458
+  percy: 0.9422
+  malfoy: 0.9346
+  yes: 0.9330
+  anything: 0.9326
+  hermione: 0.9324
+  he: 0.9306
+  ron: 0.9242
+  nothing: 0.9118
+  one: 0.9096
+
+Palabras más similares a 'gryffindor':
+  who: 0.9561
+  on: 0.9546
+  back: 0.9538
+  they: 0.9497
+  honestly: 0.9496
+  is: 0.9479
+  so: 0.9475
+  called: 0.9475
+  it: 0.9471
+  you: 0.9469
+
+Palabras más similares a 'sad':
+  rested: 0.9231
+  indoors: 0.9216
+  nastily: 0.9170
+  instructions: 0.9163
+  bein: 0.9156
+  umbrella: 0.9139
+  immortal: 0.9130
+  glinting: 0.9126
+  excitedly: 0.9082
+  flyin: 0.9055
+
+Palabras más similares a 'boy':
+  kept: 0.8941
+  pleased: 0.8934
+  felt: 0.8896
+  dear: 0.8859
+  told: 0.8812
+  question: 0.8782
+  grabbed: 0.8775
+  pulled: 0.8768
+  resign: 0.8744
+  tried: 0.8724
+
+Palabras más similares a 'sorcerer':
+  scars: 0.9309
+  booger: 0.9286
+  breathed: 0.9280
+  introduce: 0.9272
+  grubbylooking: 0.9264
+  disapprovingly: 0.9263
+  lies: 0.9252
+  blink: 0.9247
+  beyond: 0.9195
+  majorca: 0.9183
+
+Palabras más similares a 'dog':
+  stuttering: 0.5385
+  sister: 0.5297
+  imagine: 0.5143
+  cracker: 0.5136
+  tufty: 0.5081
+  ghoulie: 0.4964
+  vernons: 0.4926
+  human: 0.4903
+  address: 0.4899
+  dived: 0.4875
+
+Palabras más similares a 'person':
+  hint: 0.9296
+  ambition: 0.9290
+  darted: 0.9243
+  audience: 0.9178
+  tarts: 0.9157
+  grateful: 0.9127
+  erised: 0.9098
+  steamrollered: 0.9092
+  sing: 0.9047
+  remarkably: 0.8999
+
+Palabras más similares a 'man':
+  goodbye: 0.8354
+  seamus: 0.7971
+  uncle: 0.7919
+  name: 0.7857
+  ron: 0.7839
+  mistake: 0.7674
+  fault: 0.7661
+  wood: 0.7516
+  dean: 0.7472
+  filch: 0.7471
+
+Palabras más similares a 'one':
+  filch: 0.9235
+  hagrid: 0.9096
+  ron: 0.9048
+  sorry: 0.9043
+  percy: 0.9020
+  yes: 0.9017
+  seamus: 0.8928
+  dumbledore: 0.8913
+  slowly: 0.8903
+  done: 0.8882
+
+Palabras más similares a 'speak':
+  shop: 0.8546
+  class: 0.8259
+  concen: 0.8200
+  silently: 0.8168
+  believed: 0.8074
+  threw: 0.8042
+  puffed: 0.8009
+  smile: 0.7935
+  hadnt: 0.7857
+  wherever: 0.7855
+
+Palabras más similares a 'kill':
+  shook: 0.9348
+  inside: 0.9311
+  furiously: 0.9246
+  sighed: 0.9231
+  suddenly: 0.9207
+  agreed: 0.9156
+  warned: 0.9150
+  nose: 0.9129
+  giving: 0.9127
+  thought: 0.9126
+
+Palabras más similares a 'harry':
+  he: 0.9625
+  professor: 0.9524
+  hermione: 0.9517
+  looking: 0.9421
+  slowly: 0.9420
+  snape: 0.9381
+  done: 0.9349
+  norbert: 0.9346
+  you: 0.9322
+  are: 0.9313
+
+Palabras más similares a 'said':
+  could: 0.9720
+  took: 0.9711
+  was: 0.9711
+  wasnt: 0.9681
+  sat: 0.9653
+  time: 0.9612
+  and: 0.9587
+  called: 0.9560
+  had: 0.9557
+  see: 0.9513
+
+Palabras más similares a 'he':
+  hermione: 0.9819
+  slowly: 0.9669
+  harry: 0.9625
+  professor: 0.9611
+  snape: 0.9521
+  you: 0.9469
+  norbert: 0.9457
+  every: 0.9430
+  are: 0.9392
+  filch: 0.9372
+
+Palabras más similares a 'potter':
+  cut: 0.8869
+  feast: 0.8822
+  nose: 0.8707
+  landed: 0.8561
+  opposite: 0.8544
+  longed: 0.8500
+  chortled: 0.8483
+  earned: 0.8470
+  dislike: 0.8429
+  heres: 0.8393
+
+Palabras más similares a 'people':
+  months: 0.7582
+  nimbus: 0.7531
+  sweater: 0.7415
+  seats: 0.7359
+  thousand: 0.7301
+  bludgers: 0.7247
+  other: 0.7204
+  filch: 0.7088
+  sorry: 0.7066
+  youre: 0.7042
+
+Palabras más similares a 'ran':
+  died: 0.9588
+  everything: 0.9535
+  drew: 0.9432
+  didnt: 0.9362
+  came: 0.9359
+  closed: 0.9359
+  could: 0.9329
+  sat: 0.9301
+  ate: 0.9262
+  pulled: 0.9260
+
+Palabras más similares a 'hermione':
+  he: 0.9819
+  slowly: 0.9625
+  mm: 0.9593
+  professor: 0.9545
+  snape: 0.9529
+  harry: 0.9517
+  you: 0.9501
+  norbert: 0.9492
+  filch: 0.9419
+  every: 0.9404
+
+Palabras más similares a 'dumbledore':
+  snape: 0.9221
+  done: 0.9187
+  neville: 0.9152
+  thanks: 0.9114
+  hermione: 0.9113
+  me: 0.9100
+  he: 0.8983
+  anything: 0.8953
+  harry: 0.8922
+  one: 0.8913
+
+Palabras más similares a 'run':
+  do: 0.8587
+  added: 0.8571
+  when: 0.8371
+  yellow: 0.8359
+  ran: 0.8352
+  sat: 0.8349
+  did: 0.8333
+  day: 0.8327
+  died: 0.8316
+  glanced: 0.8304
+
+Palabras más similares a 'malfoy':
+  hagrid: 0.9346
+  filch: 0.9333
+  he: 0.9247
+  slowly: 0.9120
+  anything: 0.9077
+  sorry: 0.8953
+  hermione: 0.8919
+  professor: 0.8826
+  percy: 0.8810
+  up: 0.8786
+
+Palabras más similares a 'spoke':
+  mirror: 0.9116
+  puffed: 0.8690
+  smile: 0.8674
+  flicked: 0.8533
+  slept: 0.8473
+  kitchens: 0.8469
+  eye: 0.8441
+  free: 0.8424
+  informed: 0.8421
+  armor: 0.8413
+
+Palabras más similares a 'she':
+  filch: 0.9146
+  he: 0.9112
+  slowly: 0.9073
+  hermione: 0.8889
+  nice: 0.8888
+  hagrid: 0.8821
+  professor: 0.8810
+  malfoy: 0.8758
+  harry: 0.8748
+  me: 0.8731
+
+Palabras más similares a 'rat':
+  clicked: 0.9117
+  pretending: 0.8903
+  refereeing: 0.8847
+  joy: 0.8766
+  barrier: 0.8752
+  drive: 0.8749
+  arms: 0.8735
+  belt: 0.8710
+  rage: 0.8692
+  spying: 0.8686
+
+Palabras más similares a 'dursley':
+  saying: 0.8897
+  age: 0.8838
+  listening: 0.8832
+  reason: 0.8540
+  finished: 0.8320
+  demanded: 0.8088
+  borrowed: 0.7842
+  feet: 0.7779
+  drove: 0.7762
+  town: 0.7645
+
+Palabras más similares a 'witch':
+  guess: 0.9186
+  enchantments: 0.8932
+  wands: 0.8915
+  prune: 0.8907
+  rubbing: 0.8866
+  quiet: 0.8863
+  yeah: 0.8861
+  coward: 0.8859
+  strength: 0.8839
+  wow: 0.8794
+
+Palabras más similares a 'cat':
+  sink: 0.8806
+  flopped: 0.8774
+  owned: 0.8740
+  paid: 0.8630
+  ought: 0.8630
+  happier: 0.8554
+  honor: 0.8468
+  show: 0.8359
+  snorted: 0.8357
+  restless: 0.8353
+
+Palabras más similares a 'four':
+  dropped: 0.9177
+  furiously: 0.9063
+  conducted: 0.9030
+  murmur: 0.9000
+  fixed: 0.8992
+  doing: 0.8959
+  fast: 0.8900
+  your: 0.8891
+  nose: 0.8883
+  sir: 0.8839
+
+Palabras más similares a 'shouted':
+  over: 0.8910
+  around: 0.8560
+  this: 0.8500
+  well: 0.8481
+  threeheaded: 0.8470
+  again: 0.8429
+  in: 0.8410
+  world: 0.8374
+  followed: 0.8342
+  that: 0.8340
+
+Palabras más similares a 'forest':
+  charlie: 0.8353
+  until: 0.8288
+  let: 0.8231
+  walked: 0.8227
+  before: 0.8117
+  pomfrey: 0.8108
+  met: 0.8030
+  drills: 0.8018
+  teaches: 0.7990
+  hurried: 0.7988
+
+Palabras más similares a 'voldemort':
+  rubeus: 0.7838
+  shops: 0.6101
+  hedwig: 0.6066
+  sitting: 0.5829
+  call: 0.5473
+  til: 0.5359
+  along: 0.5351
+  football: 0.5243
+  proudly: 0.5183
+  led: 0.5025
+
+Palabras más similares a 'happy':
+  weasley: 0.6875
+  nevilles: 0.6668
+  pinned: 0.6631
+  team: 0.6495
+  voldemorts: 0.6452
+  from: 0.6442
+  harry: 0.6369
+  be: 0.6327
+  students: 0.6307
+  leap: 0.6283
+

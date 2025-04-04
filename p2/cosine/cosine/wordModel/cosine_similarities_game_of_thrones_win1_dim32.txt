@@ -1,0 +1,624 @@
+Palabras más similares a 'girl':
+  called: 0.9700
+  suggested: 0.9700
+  will: 0.9681
+  way: 0.9680
+  jon: 0.9677
+  found: 0.9667
+  that: 0.9654
+  screamed: 0.9650
+  followed: 0.9648
+  of: 0.9647
+
+Palabras más similares a 'sad':
+  quick: 0.8105
+  stay: 0.7973
+  bore: 0.7956
+  fat: 0.7924
+  dreamed: 0.7908
+  morrow: 0.7894
+  underfoot: 0.7891
+  dressed: 0.7868
+  sobbing: 0.7866
+  herself: 0.7860
+
+Palabras más similares a 'jon':
+  that: 0.9942
+  then: 0.9918
+  and: 0.9910
+  is: 0.9909
+  gave: 0.9900
+  but: 0.9899
+  had: 0.9895
+  said: 0.9891
+  asked: 0.9890
+  it: 0.9889
+
+Palabras más similares a 'wolf':
+  her: 0.9808
+  didnt: 0.9797
+  nothing: 0.9792
+  he: 0.9789
+  here: 0.9789
+  only: 0.9781
+  told: 0.9778
+  no: 0.9776
+  promised: 0.9776
+  by: 0.9775
+
+Palabras más similares a 'she':
+  you: 0.9920
+  found: 0.9911
+  is: 0.9908
+  and: 0.9904
+  but: 0.9897
+  her: 0.9885
+  of: 0.9882
+  saw: 0.9881
+  that: 0.9880
+  this: 0.9878
+
+Palabras más similares a 'kings':
+  little: 0.9696
+  a: 0.9686
+  his: 0.9660
+  with: 0.9649
+  she: 0.9634
+  sansa: 0.9627
+  its: 0.9620
+  butchers: 0.9615
+  to: 0.9611
+  at: 0.9608
+
+Palabras más similares a 'joffrey':
+  of: 0.9738
+  to: 0.9733
+  with: 0.9728
+  and: 0.9712
+  arya: 0.9710
+  he: 0.9709
+  only: 0.9704
+  this: 0.9703
+  replied: 0.9695
+  in: 0.9694
+
+Palabras más similares a 'targaryen':
+  nodded: 0.9296
+  catelyn: 0.9276
+  two: 0.9258
+  true: 0.9257
+  replied: 0.9237
+  wondered: 0.9219
+  just: 0.9209
+  lannister: 0.9200
+  glanced: 0.9199
+  liked: 0.9196
+
+Palabras más similares a 'ned':
+  than: 0.9895
+  this: 0.9851
+  heard: 0.9848
+  is: 0.9842
+  had: 0.9838
+  eyes: 0.9837
+  you: 0.9833
+  her: 0.9833
+  gave: 0.9825
+  them: 0.9825
+
+Palabras más similares a 'ambitious':
+  flashing: 0.6893
+  someplace: 0.5477
+  lowest: 0.5408
+  slippers: 0.5058
+  greenwood: 0.5054
+  brooked: 0.5047
+  mallister: 0.5017
+  labyrinth: 0.4923
+  mood: 0.4825
+  during: 0.4783
+
+Palabras más similares a 'sword':
+  will: 0.9830
+  was: 0.9759
+  if: 0.9746
+  did: 0.9745
+  gave: 0.9743
+  went: 0.9739
+  time: 0.9736
+  as: 0.9736
+  night: 0.9734
+  sat: 0.9732
+
+Palabras más similares a 'stark':
+  than: 0.9853
+  them: 0.9850
+  said: 0.9841
+  it: 0.9836
+  could: 0.9828
+  had: 0.9826
+  found: 0.9825
+  that: 0.9824
+  will: 0.9824
+  did: 0.9818
+
+Palabras más similares a 'fought':
+  mad: 0.8687
+  wild: 0.8680
+  today: 0.8611
+  real: 0.8602
+  wondered: 0.8554
+  wolf: 0.8531
+  spent: 0.8522
+  girl: 0.8499
+  help: 0.8497
+  yard: 0.8492
+
+Palabras más similares a 'two':
+  true: 0.9793
+  liked: 0.9672
+  took: 0.9665
+  yes: 0.9656
+  bran: 0.9656
+  let: 0.9654
+  today: 0.9649
+  asked: 0.9646
+  it: 0.9644
+  glanced: 0.9640
+
+Palabras más similares a 'betray':
+  snapped: 0.8463
+  murmured: 0.8431
+  teased: 0.8426
+  word: 0.8423
+  says: 0.8417
+  feet: 0.8362
+  knelt: 0.8330
+  bastards: 0.8302
+  treasured: 0.8287
+  everywhere: 0.8274
+
+Palabras más similares a 'die':
+  see: 0.9694
+  does: 0.9667
+  if: 0.9591
+  when: 0.9584
+  so: 0.9579
+  held: 0.9568
+  moment: 0.9568
+  has: 0.9566
+  took: 0.9566
+  as: 0.9563
+
+Palabras más similares a 'woman':
+  will: 0.9816
+  then: 0.9812
+  that: 0.9794
+  gave: 0.9791
+  said: 0.9791
+  found: 0.9789
+  could: 0.9787
+  saw: 0.9779
+  had: 0.9777
+  yes: 0.9774
+
+Palabras más similares a 'died':
+  would: 0.9746
+  found: 0.9740
+  as: 0.9727
+  looked: 0.9727
+  fell: 0.9720
+  had: 0.9718
+  but: 0.9714
+  saw: 0.9710
+  asked: 0.9708
+  so: 0.9707
+
+Palabras más similares a 'boy':
+  than: 0.9868
+  lady: 0.9860
+  told: 0.9858
+  rode: 0.9854
+  eyes: 0.9851
+  said: 0.9849
+  had: 0.9840
+  could: 0.9838
+  saw: 0.9832
+  is: 0.9828
+
+Palabras más similares a 'tyrion':
+  men: 0.9812
+  jaime: 0.9786
+  cersei: 0.9785
+  he: 0.9784
+  sansa: 0.9781
+  of: 0.9772
+  to: 0.9770
+  with: 0.9757
+  in: 0.9754
+  little: 0.9739
+
+Palabras más similares a 'rule':
+  impatiently: 0.6914
+  heavily: 0.6821
+  wars: 0.5700
+  harbor: 0.5497
+  bale: 0.5391
+  dornish: 0.5258
+  rare: 0.5195
+  spasmed: 0.5187
+  loosened: 0.5139
+  lovers: 0.5137
+
+Palabras más similares a 'landing':
+  party: 0.9594
+  tower: 0.9524
+  the: 0.9489
+  justice: 0.9476
+  poor: 0.9426
+  house: 0.9403
+  old: 0.9398
+  replied: 0.9372
+  my: 0.9351
+  i: 0.9342
+
+Palabras más similares a 'angry':
+  hungry: 0.8784
+  remained: 0.8737
+  hit: 0.8729
+  plate: 0.8721
+  what: 0.8697
+  climbed: 0.8682
+  dreamed: 0.8680
+  name: 0.8668
+  out: 0.8648
+  spoke: 0.8643
+
+Palabras más similares a 'betrayed':
+  things: 0.9174
+  man: 0.9168
+  began: 0.9166
+  walked: 0.9157
+  gave: 0.9148
+  benjen: 0.9145
+  else: 0.9135
+  until: 0.9120
+  here: 0.9112
+  what: 0.9107
+
+Palabras más similares a 'battle':
+  oddments: 0.6502
+  stillbirth: 0.5954
+  quietly: 0.5806
+  illyrios: 0.5664
+  spill: 0.5507
+  casterlys: 0.5370
+  depicted: 0.5312
+  regret: 0.5091
+  radiant: 0.5007
+  sails: 0.5002
+
+Palabras más similares a 'castle':
+  feet: 0.8069
+  later: 0.8010
+  rubbed: 0.7948
+  sucked: 0.7946
+  crown: 0.7937
+  hottest: 0.7933
+  paid: 0.7927
+  glanced: 0.7922
+  folded: 0.7919
+  laid: 0.7902
+
+Palabras más similares a 'wildling':
+  treacherous: 0.6273
+  certainty: 0.6045
+  abandon: 0.5753
+  deliver: 0.5617
+  nurses: 0.5401
+  traced: 0.5155
+  tarts: 0.5110
+  soul: 0.5041
+  peck: 0.5038
+  kittens: 0.5017
+
+Palabras más similares a 'dragon':
+  was: 0.9817
+  when: 0.9808
+  him: 0.9801
+  gave: 0.9798
+  grabbed: 0.9794
+  had: 0.9785
+  here: 0.9782
+  knew: 0.9781
+  then: 0.9778
+  said: 0.9776
+
+Palabras más similares a 'lannister':
+  nodded: 0.9864
+  said: 0.9859
+  had: 0.9855
+  promised: 0.9841
+  when: 0.9839
+  could: 0.9837
+  told: 0.9836
+  did: 0.9831
+  would: 0.9827
+  was: 0.9825
+
+Palabras más similares a 'happy':
+  berries: 0.6247
+  candles: 0.5774
+  knees: 0.5771
+  wiping: 0.5723
+  obscured: 0.5635
+  brilliant: 0.5595
+  stir: 0.5528
+  stunned: 0.5272
+  sunk: 0.5236
+  exploring: 0.5209
+
+Palabras más similares a 'crow':
+  ruffle: 0.5304
+  wineskin: 0.5249
+  flurry: 0.5230
+  rebuke: 0.5171
+  sighted: 0.5150
+  expression: 0.4949
+  refreshing: 0.4893
+  avert: 0.4892
+  graze: 0.4794
+  snap: 0.4727
+
+Palabras más similares a 'ruled':
+  cawing: 0.5768
+  visiting: 0.5692
+  perch: 0.5501
+  fearless: 0.5409
+  cheerfully: 0.5330
+  braced: 0.5138
+  absurd: 0.5121
+  barely: 0.5028
+  spy: 0.4960
+  sentinel: 0.4910
+
+Palabras más similares a 'fight':
+  his: 0.9485
+  first: 0.9411
+  alone: 0.9404
+  and: 0.9402
+  has: 0.9389
+  up: 0.9379
+  replied: 0.9372
+  cant: 0.9371
+  way: 0.9367
+  decided: 0.9357
+
+Palabras más similares a 'powerful':
+  tightly: 0.8285
+  forged: 0.8260
+  spoils: 0.8189
+  shook: 0.8125
+  kicked: 0.8061
+  hand: 0.8056
+  until: 0.8040
+  scared: 0.8027
+  names: 0.8025
+  gets: 0.8020
+
+Palabras más similares a 'throne':
+  circuit: 0.5997
+  nicked: 0.5824
+  gravy: 0.5423
+  frenetic: 0.5413
+  lift: 0.5008
+  lines: 0.5003
+  clapped: 0.4970
+  few: 0.4941
+  graveling: 0.4926
+  disapproving: 0.4925
+
+Palabras más similares a 'one':
+  with: 0.9846
+  made: 0.9819
+  sansa: 0.9813
+  he: 0.9804
+  it: 0.9793
+  at: 0.9787
+  who: 0.9782
+  and: 0.9782
+  man: 0.9777
+  a: 0.9773
+
+Palabras más similares a 'four':
+  sulfur: 0.6375
+  warm: 0.6249
+  mance: 0.6091
+  rage: 0.6090
+  milk: 0.6070
+  scattering: 0.5975
+  councils: 0.5963
+  driving: 0.5864
+  apple: 0.5772
+  sleeping: 0.5714
+
+Palabras más similares a 'cersei':
+  too: 0.9791
+  tyrion: 0.9785
+  he: 0.9774
+  with: 0.9748
+  only: 0.9748
+  of: 0.9732
+  place: 0.9732
+  no: 0.9710
+  to: 0.9706
+  who: 0.9704
+
+Palabras más similares a 'fly':
+  absorbed: 0.5552
+  blink: 0.5517
+  wylla: 0.5515
+  ended: 0.5285
+  aye: 0.5179
+  skinny: 0.5136
+  costly: 0.5121
+  snagged: 0.5114
+  townsfolk: 0.5095
+  rested: 0.5094
+
+Palabras más similares a 'sansa':
+  with: 0.9893
+  and: 0.9882
+  you: 0.9880
+  is: 0.9880
+  of: 0.9877
+  in: 0.9874
+  would: 0.9872
+  saw: 0.9871
+  but: 0.9862
+  men: 0.9857
+
+Palabras más similares a 'arya':
+  at: 0.9905
+  in: 0.9897
+  with: 0.9896
+  of: 0.9882
+  her: 0.9881
+  to: 0.9880
+  and: 0.9871
+  for: 0.9869
+  this: 0.9864
+  she: 0.9861
+
+Palabras más similares a 'winterfell':
+  was: 0.9860
+  time: 0.9852
+  but: 0.9845
+  looked: 0.9838
+  told: 0.9838
+  and: 0.9832
+  pushed: 0.9829
+  said: 0.9829
+  then: 0.9828
+  that: 0.9826
+
+Palabras más similares a 'lion':
+  find: 0.8671
+  picked: 0.8593
+  lannisters: 0.8587
+  hesitated: 0.8583
+  youll: 0.8576
+  mad: 0.8566
+  robb: 0.8556
+  muttered: 0.8530
+  observed: 0.8519
+  demanded: 0.8516
+
+Palabras más similares a 'wall':
+  them: 0.9833
+  knew: 0.9809
+  did: 0.9790
+  looked: 0.9789
+  as: 0.9789
+  words: 0.9788
+  had: 0.9786
+  smiled: 0.9784
+  was: 0.9778
+  before: 0.9772
+
+Palabras más similares a 'robert':
+  asked: 0.9764
+  promised: 0.9746
+  took: 0.9706
+  must: 0.9701
+  me: 0.9696
+  saw: 0.9689
+  nothing: 0.9685
+  turned: 0.9679
+  did: 0.9673
+  arryn: 0.9672
+
+Palabras más similares a 'man':
+  you: 0.9908
+  it: 0.9897
+  thought: 0.9891
+  but: 0.9889
+  that: 0.9885
+  gave: 0.9880
+  told: 0.9878
+  and: 0.9877
+  then: 0.9876
+  looked: 0.9876
+
+Palabras más similares a 'daenerys':
+  wolf: 0.9590
+  have: 0.9584
+  by: 0.9537
+  baratheon: 0.9531
+  her: 0.9500
+  lord: 0.9473
+  to: 0.9472
+  i: 0.9472
+  ever: 0.9468
+  you: 0.9468
+
+Palabras más similares a 'baratheon':
+  you: 0.9876
+  this: 0.9858
+  of: 0.9855
+  is: 0.9847
+  were: 0.9843
+  her: 0.9840
+  king: 0.9829
+  with: 0.9824
+  hand: 0.9823
+  and: 0.9823
+
+Palabras más similares a 'he':
+  in: 0.9918
+  you: 0.9917
+  to: 0.9916
+  at: 0.9912
+  this: 0.9907
+  of: 0.9907
+  with: 0.9904
+  her: 0.9904
+  is: 0.9900
+  and: 0.9898
+
+Palabras más similares a 'kingdom':
+  hoot: 0.5739
+  raising: 0.5722
+  marble: 0.5719
+  tore: 0.5529
+  owned: 0.5403
+  cost: 0.5207
+  jonos: 0.5201
+  purses: 0.5188
+  lies: 0.5155
+  rides: 0.5126
+
+Palabras más similares a 'horse':
+  mad: 0.8486
+  fought: 0.8393
+  hours: 0.8344
+  wrong: 0.8341
+  regarded: 0.8324
+  living: 0.8263
+  today: 0.8240
+  wild: 0.8197
+  banners: 0.8186
+  hate: 0.8163
+
+Palabras más similares a 'three':
+  he: 0.9396
+  may: 0.9384
+  at: 0.9336
+  in: 0.9332
+  arya: 0.9332
+  even: 0.9330
+  died: 0.9328
+  about: 0.9327
+  for: 0.9309
+  wanted: 0.9307
+

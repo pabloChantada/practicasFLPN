@@ -1,24 +1,55 @@
-from collections import defaultdict
-from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
 import random
 
+
 def read_dataset(filepath):
-    """Lee el dataset y devuelve el texto como una lista de palabras."""
+    """
+    Lee el dataset desde un archivo y devuelve el texto como una lista de palabras.
+    
+    Args:
+        filepath (str): Ruta al archivo de texto a leer.
+        
+    Returns:
+        list: Lista de palabras en minúsculas del texto.
+    """
     with open(filepath, "r", encoding="utf-8") as f:
         return f.read().lower().split()
 
+
 def load_target_words(filepath):
-    """Carga las palabras objetivo desde un archivo y las devuelve como un conjunto."""
+    """
+    Carga las palabras objetivo desde un archivo y las devuelve como un conjunto.
+    
+    Las palabras objetivo son aquellas para las que se analizarán los embeddings.
+    
+    Args:
+        filepath (str): Ruta al archivo que contiene las palabras objetivo.
+        
+    Returns:
+        set: Conjunto de palabras objetivo en minúsculas.
+    """
     with open(filepath, "r", encoding="utf-8") as f:
         return set(f.read().lower().split())
 
-def create_training_pairs(tokenized_text, target_words, vocab_size, context_window=2, num_negative_samples=0):
-    """
-    Genera pares de entrenamiento positivos y negativos.
 
-    - context_window=2 significa que se toman 2 palabras antes y 2 después.
-    - Se generan ejemplos negativos para mejorar el aprendizaje.
+def create_training_pairs(tokenized_text, target_words, vocab_size, context_window=2, negSamples=True):
+    """
+    Genera pares de entrenamiento positivos y negativos para el modelo de contexto.
+    
+    Para cada palabra objetivo, extrae palabras de contexto en una ventana deslizante
+    y opcionalmente genera ejemplos negativos para el entrenamiento.
+    
+    Args:
+        tokenized_text (list): Texto tokenizado como lista de índices de palabras.
+        target_words (set): Conjunto de índices de las palabras objetivo.
+        vocab_size (int): Tamaño del vocabulario.
+        context_window (int): Tamaño de la ventana de contexto a cada lado de la palabra.
+        negSamples (bool): Si se deben generar ejemplos negativos.
+        
+    Returns:
+        tuple: (pairs, labels) donde:
+            - pairs: array numpy de pares [palabra_objetivo, palabra_contexto]
+            - labels: array numpy de etiquetas (1 para relación positiva, 0 para negativa)
     """
     
     pairs, labels = [], []
@@ -26,41 +57,47 @@ def create_training_pairs(tokenized_text, target_words, vocab_size, context_wind
 
     for i, word_index in enumerate(tokenized_text):
         if word_index in target_words:  # Solo si la palabra está en la lista objetivo
+            # Definir la ventana de contexto
             window_start = max(i - context_window, 0)
             window_end = min(i + context_window + 1, len(tokenized_text))
 
             context_words = []
+            # Generar pares positivos con las palabras de contexto
             for j in range(window_start, window_end):
-                if i != j:  
+                if i != j:  # Excluir la palabra objetivo
                     pairs.append([word_index, tokenized_text[j]])  # Relación positiva
                     labels.append(1)
                     context_words.append(tokenized_text[j])
-
-            # Generar palabras negativas
-            for _ in range(num_negative_samples):
-                negative_word = random.choice(vocab_list)
-                while negative_word in context_words or negative_word == word_index:  
+                    
+            if negSamples:
+                # Generar ejemplos negativos
+                for _ in range(window_start, window_end):
+                    # Seleccionar una palabra aleatoria que no sea ni la objetivo ni una de contexto
                     negative_word = random.choice(vocab_list)
+                    while negative_word in context_words or negative_word == word_index:  
+                        negative_word = random.choice(vocab_list)
 
-                pairs.append([word_index, negative_word])  # Relación negativa
-                labels.append(0)
+                    pairs.append([word_index, negative_word])  # Relación negativa
+                    labels.append(0)
 
     return np.array(pairs), np.array(labels)
 
 
-
-
 def create_context(tokenized_text, target_indexes, window_size=2):
     """
-    Genera ventanas de contexto y palabras objetivo para las palabras objetivo específicas.
-
+    Genera ventanas de contexto y palabras objetivo para el entrenamiento del modelo de contexto.
+    
+    Para cada ocurrencia de una palabra objetivo, extrae su ventana de contexto.
+    
     Args:
-        tokenized_text (list): Texto tokenizado (lista de índices de palabras).
+        tokenized_text (list): Texto tokenizado como lista de índices de palabras.
         target_indexes (set): Conjunto de índices de las palabras objetivo.
-        window_size (int): Tamaño de la ventana de contexto (número de palabras a cada lado).
-
+        window_size (int): Tamaño de la ventana de contexto a cada lado.
+        
     Returns:
-        tuple: (X, y), donde X es un array de ventanas de contexto e y es un array de palabras objetivo.
+        tuple: (X, y) donde:
+            - X: array numpy de ventanas de contexto
+            - y: array numpy de palabras objetivo correspondientes
     """
     X = []
     y = []
@@ -71,10 +108,8 @@ def create_context(tokenized_text, target_indexes, window_size=2):
         # Solo generar contexto si la palabra objetivo está en target_indexes
         if target in target_indexes:
             # Ventana de contexto: palabras anteriores y posteriores
-            context = tokenized_text[i - window_size:i] + tokenized_text[i + 1:i + window_size + 1]
+            context = tokenized_text[i - window_size:i] + tokenized_text[i + window_size + 1:i + window_size * 2 + 1]
             X.append(context)
             y.append(target)
 
     return np.array(X), np.array(y)
-
-

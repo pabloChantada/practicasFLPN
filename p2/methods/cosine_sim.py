@@ -1,21 +1,33 @@
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from tensorflow.keras.models import load_model
 
 
-
-# Función para calcular la similitud del coseno
 def compute_cosine_similarities(target_words, word_index, embedding_weights, top_n=10):
+    """
+    Calcula las similitudes de coseno entre palabras objetivo y todo el vocabulario.
     
+    Para cada palabra objetivo, encuentra las palabras más similares según
+    la similitud de coseno de sus embeddings.
+    
+    Args:
+        target_words (list): Lista de palabras objetivo para analizar.
+        word_index (dict): Mapeo de palabras a sus índices en la matriz de embeddings.
+        embedding_weights (numpy.ndarray): Matriz de pesos de embeddings.
+        top_n (int): Número de palabras similares a retornar para cada palabra objetivo.
+        
+    Returns:
+        dict: Diccionario con palabras objetivo como claves y listas de
+              (palabra_similar, similitud) como valores.
+    """
     results = {}
     
-    # Crear mapeo inverso index -> word
+    # Crear mapeo inverso índice -> palabra
     index_to_word = {i: word for word, i in word_index.items()}
     
     # Número total de palabras en el vocabulario
     vocab_size = len(word_index) + 1
     
-    # Calcular todas las similitudes de coseno de una vez
+    # Calcular todas las similitudes de coseno de una vez (más eficiente)
     all_similarities = cosine_similarity(embedding_weights)
     
     for target_word in target_words:
@@ -46,12 +58,14 @@ def compute_cosine_similarities(target_words, word_index, embedding_weights, top
         results[target_word] = most_similar
     
     return results
+
+
 def save_cosine_similarities(results, filename):
     """
     Guarda las similitudes de coseno en un archivo de texto.
 
     Args:
-        results (dict): Diccionario con las palabras objetivo y sus palabras más similares.
+        results (dict): Diccionario con palabras objetivo y sus palabras más similares.
         filename (str): Ruta del archivo donde se guardarán los resultados.
     """
     with open(filename, 'w', encoding='utf-8') as file:
@@ -60,49 +74,3 @@ def save_cosine_similarities(results, filename):
             for word, similarity in similar_words:
                 file.write(f"  {word}: {similarity:.4f}\n")
             file.write("\n")
-# Función principal
-def main():
-    # Configuración
-    dataset_path = "materiales/the_fellowship_of_the_ring.txt"
-    target_words_path = "../materiales/target_words_the_fellowship_of_the_ring.txt"
-    embedding_size = 64
-    
-    # Leer el dataset
-    text = read_dataset(dataset_path)
-    if not text:
-        return
-    
-    # Tokenizar el texto
-    tokenizer = Tokenizer()
-    tokenizer.fit_on_texts([text])
-    word_index = tokenizer.word_index
-    vocab_size = len(word_index) + 1
-    
-    # Convertir el texto a secuencia de tokens
-    tokenized_text = tokenizer.texts_to_sequences([text])[0]
-    
-    # Entrenar un modelo de embeddings simple
-    model = train_embedding_model(tokenized_text, vocab_size, embedding_size)
-    
-    # Obtener los pesos de la capa de embedding
-    embedding_layer = model.get_layer(name="embedding_layer")
-    embedding_weights = embedding_layer.get_weights()[0]
-    
-    # Leer las palabras objetivo
-    target_words = read_target_words(target_words_path)
-    if not target_words:
-        return
-    
-    # Calcular similitudes
-    similarities = compute_cosine_similarities(target_words, word_index, embedding_weights)
-    
-    # Mostrar resultados
-    for target_word, similar_words in similarities.items():
-        print(f"\nPalabras más similares a '{target_word}':")
-        for i, (word, similarity) in enumerate(similar_words, 1):
-            print(f"{i}. {word} (Similitud: {similarity:.4f})")
-
-    return target_words, embedding_weights, word_index
-
-if __name__ == "__main__":
-    main()

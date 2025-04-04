@@ -1,0 +1,552 @@
+Palabras más similares a 'sad':
+  behind: 0.9183
+  dont: 0.9152
+  come: 0.9139
+  asked: 0.9122
+  once: 0.9121
+  sleep: 0.9119
+  present: 0.9105
+  they: 0.9102
+  mr: 0.9100
+  in: 0.9096
+
+Palabras más similares a 'ring':
+  is: 0.9934
+  to: 0.9931
+  this: 0.9931
+  as: 0.9930
+  that: 0.9930
+  was: 0.9929
+  if: 0.9929
+  i: 0.9928
+  not: 0.9928
+  his: 0.9928
+
+Palabras más similares a 'legolas':
+  has: 0.9595
+  quickly: 0.9595
+  will: 0.9593
+  way: 0.9590
+  before: 0.9587
+  seen: 0.9580
+  thought: 0.9578
+  him: 0.9574
+  when: 0.9570
+  even: 0.9568
+
+Palabras más similares a 'mountain':
+  horse: 0.9181
+  grey: 0.9157
+  say: 0.9081
+  bag: 0.9076
+  get: 0.9075
+  now: 0.9075
+  sam: 0.9070
+  we: 0.9069
+  looking: 0.9061
+  will: 0.9059
+
+Palabras más similares a 'hobbit':
+  again: 0.9782
+  more: 0.9776
+  before: 0.9776
+  he: 0.9774
+  as: 0.9773
+  not: 0.9773
+  found: 0.9772
+  it: 0.9772
+  seen: 0.9771
+  to: 0.9770
+
+Palabras más similares a 'forest':
+  first: 0.9583
+  bilbo: 0.9571
+  with: 0.9569
+  on: 0.9566
+  went: 0.9564
+  found: 0.9557
+  asked: 0.9554
+  all: 0.9551
+  my: 0.9549
+  was: 0.9549
+
+Palabras más similares a 'wolf':
+  times: 0.9128
+  other: 0.9051
+  tell: 0.9042
+  sound: 0.9039
+  any: 0.9038
+  none: 0.9033
+  of: 0.9029
+  wont: 0.9028
+  thing: 0.9025
+  growing: 0.9018
+
+Palabras más similares a 'frodo':
+  i: 0.9982
+  to: 0.9980
+  said: 0.9979
+  he: 0.9978
+  and: 0.9977
+  it: 0.9976
+  is: 0.9976
+  was: 0.9975
+  for: 0.9974
+  him: 0.9973
+
+Palabras más similares a 'she':
+  still: 0.9647
+  through: 0.9644
+  see: 0.9629
+  tom: 0.9625
+  behind: 0.9617
+  with: 0.9613
+  though: 0.9613
+  asked: 0.9612
+  sam: 0.9612
+  do: 0.9611
+
+Palabras más similares a 'ran':
+  is: 0.9806
+  them: 0.9789
+  could: 0.9787
+  him: 0.9786
+  suddenly: 0.9784
+  and: 0.9783
+  as: 0.9783
+  that: 0.9782
+  to: 0.9782
+  looking: 0.9781
+
+Palabras más similares a 'gandalf':
+  to: 0.9972
+  was: 0.9972
+  his: 0.9968
+  and: 0.9967
+  i: 0.9965
+  it: 0.9964
+  frodo: 0.9962
+  in: 0.9962
+  but: 0.9961
+  him: 0.9959
+
+Palabras más similares a 'eagle':
+  weathertop: 0.7788
+  trolls: 0.7714
+  booted: 0.7643
+  bring: 0.7637
+  springing: 0.7617
+  straining: 0.7545
+  echo: 0.7533
+  greatly: 0.7517
+  which: 0.7504
+  cheer: 0.7488
+
+Palabras más similares a 'walk':
+  added: 0.9281
+  bowed: 0.9265
+  seems: 0.9259
+  yes: 0.9255
+  shall: 0.9237
+  their: 0.9236
+  would: 0.9235
+  years: 0.9234
+  morning: 0.9225
+  comes: 0.9221
+
+Palabras más similares a 'sword':
+  to: 0.9825
+  we: 0.9823
+  or: 0.9814
+  all: 0.9812
+  in: 0.9810
+  that: 0.9810
+  a: 0.9808
+  voice: 0.9805
+  if: 0.9804
+  when: 0.9804
+
+Palabras más similares a 'gimli':
+  before: 0.9701
+  you: 0.9683
+  be: 0.9679
+  came: 0.9678
+  not: 0.9670
+  may: 0.9668
+  some: 0.9661
+  even: 0.9658
+  what: 0.9654
+  that: 0.9654
+
+Palabras más similares a 'spoke':
+  his: 0.9917
+  that: 0.9917
+  had: 0.9917
+  a: 0.9916
+  with: 0.9914
+  at: 0.9912
+  no: 0.9912
+  was: 0.9912
+  and: 0.9911
+  i: 0.9910
+
+Palabras más similares a 'fought':
+  tookland: 0.3953
+  downcast: 0.3896
+  quieter: 0.3866
+  domes: 0.3864
+  outward: 0.3836
+  springlering: 0.3713
+  mightiest: 0.3672
+  rockets: 0.3547
+  elfwrought: 0.3519
+  twilit: 0.3503
+
+Palabras más similares a 'elf':
+  seen: 0.9609
+  if: 0.9604
+  go: 0.9604
+  cried: 0.9602
+  left: 0.9593
+  ring: 0.9585
+  now: 0.9578
+  last: 0.9577
+  bilbo: 0.9577
+  not: 0.9576
+
+Palabras más similares a 'two':
+  said: 0.9929
+  he: 0.9923
+  in: 0.9922
+  with: 0.9920
+  is: 0.9920
+  that: 0.9920
+  to: 0.9920
+  and: 0.9920
+  but: 0.9917
+  i: 0.9917
+
+Palabras más similares a 'woman':
+  shattered: 0.4153
+  gusts: 0.4153
+  shimmer: 0.4094
+  note: 0.3900
+  nli: 0.3682
+  wayside: 0.3592
+  wary: 0.3472
+  kinship: 0.3462
+  slippery: 0.3459
+  hosts: 0.3458
+
+Palabras más similares a 'wizard':
+  you: 0.9522
+  am: 0.9499
+  though: 0.9492
+  said: 0.9488
+  about: 0.9482
+  let: 0.9479
+  at: 0.9476
+  must: 0.9476
+  he: 0.9467
+  once: 0.9467
+
+Palabras más similares a 'aragorn':
+  said: 0.9874
+  have: 0.9874
+  in: 0.9872
+  on: 0.9868
+  i: 0.9866
+  he: 0.9864
+  what: 0.9863
+  answered: 0.9862
+  of: 0.9862
+  your: 0.9860
+
+Palabras más similares a 'spider':
+  staunch: 0.5196
+  steed: 0.4612
+  grune: 0.4348
+  swinging: 0.4011
+  slippers: 0.3947
+  hottest: 0.3671
+  licked: 0.3526
+  neatly: 0.3478
+  distrusted: 0.3462
+  wordyet: 0.3423
+
+Palabras más similares a 'mordor':
+  off: 0.9710
+  could: 0.9708
+  much: 0.9699
+  them: 0.9693
+  took: 0.9691
+  for: 0.9689
+  frodo: 0.9688
+  one: 0.9685
+  were: 0.9684
+  was: 0.9681
+
+Palabras más similares a 'goblin':
+  promise: 0.4718
+  starglimmer: 0.4178
+  increasing: 0.3886
+  broadening: 0.3865
+  disappointed: 0.3851
+  boar: 0.3821
+  provision: 0.3804
+  vanquished: 0.3798
+  swathed: 0.3690
+  pattered: 0.3632
+
+Palabras más similares a 'saruman':
+  more: 0.9705
+  him: 0.9704
+  did: 0.9700
+  me: 0.9697
+  a: 0.9695
+  for: 0.9692
+  would: 0.9692
+  his: 0.9690
+  gandalf: 0.9690
+  in: 0.9689
+
+Palabras más similares a 'dwarf':
+  were: 0.9537
+  still: 0.9523
+  of: 0.9522
+  did: 0.9520
+  end: 0.9519
+  there: 0.9512
+  my: 0.9511
+  only: 0.9508
+  comes: 0.9506
+  but: 0.9505
+
+Palabras más similares a 'travel':
+  voices: 0.7873
+  commanding: 0.7653
+  joking: 0.7605
+  upon: 0.7566
+  begging: 0.7562
+  companions: 0.7561
+  shrugged: 0.7558
+  ought: 0.7553
+  finished: 0.7543
+  muttered: 0.7540
+
+Palabras más similares a 'angry':
+  though: 0.9539
+  cold: 0.9531
+  walked: 0.9529
+  must: 0.9528
+  your: 0.9519
+  an: 0.9515
+  still: 0.9515
+  are: 0.9507
+  if: 0.9503
+  like: 0.9500
+
+Palabras más similares a 'bilbo':
+  said: 0.9960
+  had: 0.9960
+  it: 0.9958
+  but: 0.9958
+  at: 0.9955
+  that: 0.9954
+  no: 0.9954
+  you: 0.9952
+  on: 0.9952
+  a: 0.9950
+
+Palabras más similares a 'sauron':
+  from: 0.9781
+  not: 0.9780
+  cried: 0.9774
+  about: 0.9774
+  his: 0.9772
+  as: 0.9769
+  thought: 0.9769
+  this: 0.9768
+  heard: 0.9767
+  be: 0.9767
+
+Palabras más similares a 'shire':
+  they: 0.9862
+  to: 0.9857
+  them: 0.9854
+  was: 0.9851
+  had: 0.9849
+  he: 0.9849
+  if: 0.9849
+  then: 0.9848
+  for: 0.9848
+  i: 0.9847
+
+Palabras más similares a 'run':
+  see: 0.9679
+  saw: 0.9653
+  head: 0.9651
+  on: 0.9642
+  who: 0.9639
+  what: 0.9639
+  gandalf: 0.9638
+  was: 0.9636
+  much: 0.9635
+  himself: 0.9632
+
+Palabras más similares a 'speak':
+  this: 0.9778
+  its: 0.9778
+  if: 0.9777
+  is: 0.9776
+  time: 0.9774
+  not: 0.9773
+  he: 0.9766
+  had: 0.9763
+  all: 0.9761
+  was: 0.9760
+
+Palabras más similares a 'brave':
+  arches: 0.6907
+  case: 0.6691
+  picked: 0.6661
+  legs: 0.6616
+  spring: 0.6582
+  weathertop: 0.6546
+  softly: 0.6538
+  searched: 0.6537
+  overtaken: 0.6518
+  love: 0.6499
+
+Palabras más similares a 'orc':
+  does: 0.9527
+  most: 0.9513
+  up: 0.9468
+  far: 0.9464
+  coming: 0.9464
+  mr: 0.9464
+  ready: 0.9459
+  any: 0.9458
+  more: 0.9453
+  seen: 0.9453
+
+Palabras más similares a 'happy':
+  told: 0.9539
+  how: 0.9486
+  eyes: 0.9472
+  into: 0.9470
+  strider: 0.9464
+  well: 0.9458
+  we: 0.9457
+  soon: 0.9454
+  made: 0.9452
+  spoke: 0.9452
+
+Palabras más similares a 'fight':
+  rise: 0.8095
+  bright: 0.8028
+  disappeared: 0.7977
+  saruman: 0.7958
+  hour: 0.7943
+  bree: 0.7942
+  matter: 0.7926
+  shut: 0.7919
+  rolled: 0.7913
+  journey: 0.7910
+
+Palabras más similares a 'one':
+  the: 0.9964
+  of: 0.9963
+  to: 0.9956
+  that: 0.9955
+  it: 0.9954
+  was: 0.9954
+  in: 0.9953
+  all: 0.9952
+  there: 0.9951
+  be: 0.9948
+
+Palabras más similares a 'four':
+  know: 0.9552
+  very: 0.9534
+  indeed: 0.9534
+  could: 0.9495
+  lost: 0.9494
+  strider: 0.9490
+  face: 0.9488
+  say: 0.9486
+  after: 0.9484
+  him: 0.9482
+
+Palabras más similares a 'man':
+  saw: 0.9786
+  to: 0.9776
+  had: 0.9771
+  light: 0.9765
+  that: 0.9764
+  has: 0.9763
+  no: 0.9762
+  was: 0.9762
+  made: 0.9761
+  or: 0.9760
+
+Palabras más similares a 'sam':
+  not: 0.9969
+  you: 0.9968
+  and: 0.9967
+  at: 0.9966
+  that: 0.9966
+  but: 0.9966
+  had: 0.9964
+  could: 0.9964
+  said: 0.9964
+  no: 0.9963
+
+Palabras más similares a 'he':
+  i: 0.9990
+  it: 0.9989
+  and: 0.9989
+  that: 0.9988
+  had: 0.9987
+  his: 0.9987
+  is: 0.9987
+  to: 0.9987
+  was: 0.9986
+  said: 0.9986
+
+Palabras más similares a 'shield':
+  understand: 0.9514
+  bilbo: 0.9452
+  now: 0.9443
+  drew: 0.9441
+  shouted: 0.9432
+  he: 0.9426
+  at: 0.9423
+  few: 0.9417
+  shall: 0.9416
+  hear: 0.9416
+
+Palabras más similares a 'horse':
+  more: 0.9569
+  open: 0.9559
+  or: 0.9557
+  up: 0.9551
+  we: 0.9546
+  it: 0.9545
+  as: 0.9544
+  dark: 0.9544
+  on: 0.9543
+  he: 0.9542
+
+Palabras más similares a 'three':
+  but: 0.9870
+  of: 0.9865
+  you: 0.9863
+  in: 0.9862
+  with: 0.9862
+  at: 0.9861
+  that: 0.9861
+  and: 0.9860
+  do: 0.9859
+  him: 0.9858
+

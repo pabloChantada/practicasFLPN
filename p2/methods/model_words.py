@@ -2,20 +2,22 @@ from tensorflow.keras.layers import Embedding, Dense, Input, GlobalAveragePoolin
 from tensorflow.keras.models import Model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from dataset_reader import create_context, read_dataset, load_target_words
-from visualize import visualize_tsne_embeddings
+from visualize import visualize_tsne_embeddings, visualize_all_tsne_embeddings
 from cosine_sim import compute_cosine_similarities, save_cosine_similarities
-import tensorflow as tf
 import json
-@tf.keras.saving.register_keras_serializable()
+
 class WordModel(Model):
+    """
+    Este modelo toma palabras de contexto como entrada y predice la palabra objetivo
+    correspondiente.
+    """
+    
     def __init__(self, vocab_size, embedding_size, window_size):
         """
-        Inicializa el modelo de predicción de palabras dado su contexto.
-
         Args:
-            vocab_size (int): Tamaño del vocabulario.
+            vocab_size (int): Tamaño del vocabulario (número de palabras únicas).
             embedding_size (int): Dimensión de los embeddings.
-            window_size (int): Tamaño de la ventana de contexto (número de palabras a cada lado).
+            window_size (int): Tamaño de la ventana de contexto a cada lado.
         """
         super(WordModel, self).__init__()
 
@@ -37,13 +39,13 @@ class WordModel(Model):
 
     def call(self, inputs):
         """
-        Define el paso hacia adelante del modelo.
+        Define el forward del modelo.
 
         Args:
-            inputs (tensor): Ventana de contexto (batch_size, 2 * window_size).
+            inputs (tensor): Ventana de contexto de forma (batch_size, 2*window_size).
 
         Returns:
-            tensor: Predicción de la palabra objetivo (batch_size, vocab_size).
+            tensor: Predicción de la palabra objetivo de forma (batch_size, vocab_size).
         """
         # Obtener embeddings de las palabras de contexto
         context_embedding = self.embedding_context(inputs)  # Forma: (batch_size, 2*window_size, embedding_size)
@@ -58,25 +60,28 @@ class WordModel(Model):
 
     def build_graph(self):
         """
-        Método opcional para ver el modelo antes de entrenarlo.
-
+        Construye y devuelve un modelo de Keras con entradas y salidas definidas.
+        
         Returns:
-            Model: Modelo de Keras con entradas y salidas definidas.
+            Model: Modelo de Keras con la arquitectura definida.
         """
         inputs = Input(shape=(2 * self.window_size,), name="input_context")
         return Model(inputs=inputs, outputs=self.call(inputs))
-    
+
 
 if __name__ == "__main__":
+    # Cargar la configuración desde el archivo JSON
     with open("config.json") as f:
         configs = json.load(f)
     
+    # Iterar sobre cada configuración especificada
     for config in configs:
         corpus_choice = config["corpus"]
         ventana = config["ventana"] 
         dims = config["dims"]
-        batch_size = 128
-        epochs = 5
+        batch_size = 128  	# Valor predeterminado para corpus pequeños
+        epochs = 5       	# Valor predeterminado para corpus pequeños
+        
         # Configuración según la selección del corpus
         if corpus_choice == "1":
             dataset_path = "materiales/game_of_thrones.txt"
@@ -102,12 +107,11 @@ if __name__ == "__main__":
             model_name = f"embeddings/wordModel/word_embedding_text8_win{ventana}_dim{dims}.keras"
             plot_filename = f"plots/wordModel/tsne_embeddings_text8_win{ventana}_dim{dims}.png"
             cosine_filename = f"cosine/wordModel/cosine_similarities_text8_win{ventana}_dim{dims}.txt"
+            # Ajustar hiperparámetros para corpus más grande
             batch_size = 1024
             epochs = 20
         else:
             raise ValueError("Selección no válida. Introduce 1, 2, 3 ó 4.")
-        # Configuración común
-        # Dimensión de los embeddings
 
         # 1. Leer el dataset y palabras objetivo
         text = read_dataset(dataset_path)
@@ -119,13 +123,15 @@ if __name__ == "__main__":
         word_index = tokenizer.word_index
         vocab_size = len(word_index) + 1  # +1 para el token de padding
 
+        # Crear un mapeo inverso de índice a palabra
         vocab = [""] * (len(word_index) + 1)  # +1 porque los índices empiezan en 1
         for word, idx in word_index.items():
             vocab[idx] = word
 
         # Convertir el texto a secuencia de tokens
         tokenized_text = tokenizer.texts_to_sequences([text])[0]
-        target_indexes = {word_index[word] for word in target_words if word in word_index}  # Convertir target a índices
+        # Convertir palabras objetivo a sus índices correspondientes
+        target_indexes = {word_index[word] for word in target_words if word in word_index}
 
         # 3. Crear secuencias de entrenamiento usando ventana deslizante
         X, y = create_context(tokenized_text, target_indexes, ventana)
@@ -136,44 +142,71 @@ if __name__ == "__main__":
         print(f"Forma de X: {X.shape}")
         print(f"Forma de y: {y.shape}")
 
-        # Construir y compilar el modelo
+        # 4. Construir y compilar el modelo
         model = WordModel(vocab_size, dims, ventana)
         model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
         # Mostrar resumen del modelo
         model.build_graph().summary()
-
-        # Entrenar el modelo
         
+        # 5. Visualizar embeddings iniciales (no entrenados)
+        # Obtener los pesos iniciales de la capa de embedding
+        embeddings = model.get_layer('embedding_context').get_weights()[0]
+        
+        # Visualizar embeddings iniciales de palabras objetivo
+        visualize_tsne_embeddings(
+            words=target_words,
+            embeddings=embeddings,
+            word_index=word_index,
+            filename=plot_filename[:-4] + "noFitnoNeg.png"
+        )
+        
+        # Visualizar todos los embeddings iniciales
+        visualize_all_tsne_embeddings(
+            embeddings=embeddings,
+            word_index=word_index,
+            words_to_plot=None,  # None = plotear todo el vocabulario
+            words_to_label=target_words,
+            filename=plot_filename[:-4] + "noFitnoNegALL.png"
+        )
+        
+        # 6. Entrenar el modelo
         history = model.fit(
             X,  # Entrada: ventanas de contexto
             y,  # Salida: palabras objetivo
             batch_size=batch_size,
             epochs=epochs,
-            validation_split=0.2
+            validation_split=0.2  # 20% para validación
         )
 
-        # Guardar el modelo entrenado
+        # 7. Guardar el modelo entrenado
         model.save(model_name)
 
-        # Obtener los embeddings entrenados
+        # 8. Evaluar y visualizar los embeddings entrenados
+        # Obtener los embeddings finales
         embeddings = model.get_layer('embedding_context').get_weights()[0]
 
-        
-        # Visualizar los embeddings de las palabras objetivo
+        # Visualizar embeddings de palabras objetivo
         visualize_tsne_embeddings(
-            words=target_words,  # Lista de palabras objetivo
-            embeddings=embeddings,  # Embeddings entrenados
+            words=target_words,
+            embeddings=embeddings,
             word_index=word_index,
-            window=2*ventana+1,
-            dims=dims,  # Diccionario de palabras a índices
-            filename=plot_filename # Guardar la visualización en un archivo
+            filename=plot_filename[:-4] + "noNeg.png"
         )
-
-        # Calcular similitudes de coseno
+        
+        # Visualizar todos los embeddings
+        visualize_all_tsne_embeddings(
+            embeddings=embeddings,
+            word_index=word_index,
+            words_to_plot=None,
+            words_to_label=target_words,
+            filename=plot_filename[:-4] + "noNegALL.png"
+        )
+        
+        # 9. Calcular similitudes de coseno entre palabras
         cosine_results = compute_cosine_similarities(target_words, word_index, embeddings)
 
-        # Imprimir similitudes de coseno
+        # 10. Imprimir y guardar similitudes de coseno
         print("\nSimilitudes de coseno:")
         for target_word, similar_words in cosine_results.items():
             print(f"Palabras más similares a '{target_word}':")
@@ -181,7 +214,6 @@ if __name__ == "__main__":
                 print(f"  {word}: {similarity:.4f}")
             print()
 
-        # Guardar similitudes de coseno en un archivo de texto
-    # Crear directorio si no existe
+        # Guardar similitudes en un archivo de texto
         save_cosine_similarities(cosine_results, cosine_filename)
         print(f"Similitudes de coseno guardadas en '{cosine_filename}'.")
