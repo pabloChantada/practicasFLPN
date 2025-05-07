@@ -127,7 +127,7 @@ class NERTagger:
                                             y=all_tags)
         return dict(enumerate(class_weights))
 
-    def train(self, epochs=1, batch_size=32):
+    def train(self, epochs=50, batch_size=32):
         X_train = pad_sequences(self.train_sentences_idx, maxlen=self.max_len, padding='post')
         y_train = pad_sequences(self.train_tags_idx, maxlen=self.max_len, padding='post')
         y_train = np.array([to_categorical(seq, num_classes=len(self.tag2idx)) for seq in y_train])
@@ -180,23 +180,26 @@ class NERTagger:
                     true_seq.append(true_tag)
                     pred_seq.append(pred_tag)
             y_true_labels.append(true_seq)
-            y_pred_labels.append(pred_seq)        
+            y_pred_labels.append(pred_seq)    
+
+        # Extraer tipos de entidades (removiendo los prefijos B-, I-, etc.)
+        entity_tags = set(tag.split("-")[-1] for tag in self.tag2idx.keys() if tag != "O")
 
         # Evaluación
-        evaluator = Evaluator(y_true_labels, y_pred_labels, tags=list(self.tag2idx.keys()), loader="list")
+        evaluator = Evaluator(y_true_labels, y_pred_labels, tags=list(entity_tags), loader="list")
         results, results_per_tag, result_indices, result_indices_by_tag = evaluator.evaluate()
 
-        print(results)
+        # print(results_per_tag)
 
-        # print("\n[Overall Evaluation]")
-        # for metric, score in results.items():
-        #     print(f"{metric}: {score:.4f}")
 
-        # print("\n[Per-Entity Evaluation]")
-        # for tag, scores in results_per_tag.items():
-        #     print(f"\nEntity: {tag}")
-        #     for metric, score in scores.items():
-        #         print(f"  {metric}: {score:.4f}")
+        print("\n[Per-Entity Evaluation by Evaluation Mode]")
+        for entity, mode_scores in results_per_tag.items():
+            print(f"\nEntity: {entity}")
+            for mode in ['strict', 'exact', 'partial', 'ent_type']:
+                metrics = mode_scores.get(mode, {})
+                f1 = metrics.get('f1', 0)
+                print(f"  [{mode.title()}] F1: {f1:.4f}")
+
 
 
     def test(self):
