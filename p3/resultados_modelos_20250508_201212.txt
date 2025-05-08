@@ -1,0 +1,72 @@
+======================================
+RESULTADOS DE EVALUACIÓN DE MODELOS
+======================================
+
+Fecha: 2025-05-08 20:12:12
+
+
+========================================
+TAREA: POS
+========================================
+
+MODELO 1:
+  Embeddings: random
+  LSTM: Bidireccional
+  Precisión: 0.4267
+  Pérdida: 0.2731
+  Tiempo: 14.28 segundos
+
+MODELO 2:
+  Embeddings: random
+  LSTM: Simple
+  Precisión: 0.4175
+  Pérdida: 0.3018
+  Tiempo: 7.85 segundos
+
+MODELO 3:
+  Embeddings: word2vec
+  LSTM: Simple
+  Precisión: 0.4163
+  Pérdida: 0.3084
+  Tiempo: 34.72 segundos
+
+MODELO 4:
+  Embeddings: word2vec
+  LSTM: Bidireccional
+  Precisión: 0.4126
+  Pérdida: 0.3008
+  Tiempo: 31.76 segundos
+
+
+========================================
+TAREA: NER
+========================================
+
+MODELO 1:
+  Embeddings: random
+  LSTM: Bidireccional
+  Precisión: 0.5029
+  Pérdida: 0.7158
+  Tiempo: 39.41 segundos
+
+MODELO 2:
+  Embeddings: word2vec
+  LSTM: Bidireccional
+  Precisión: 0.5005
+  Pérdida: 0.6041
+  Tiempo: 52.19 segundos
+
+MODELO 3:
+  Embeddings: word2vec
+  LSTM: Simple
+  Precisión: 0.4868
+  Pérdida: 0.6238
+  Tiempo: 43.52 segundos
+
+MODELO 4:
+  Embeddings: random
+  LSTM: Simple
+  Precisión: 0.4826
+  Pérdida: 0.7308
+  Tiempo: 26.15 segundos
+
