@@ -1,8 +1,6 @@
 ======================================
-RESULTADOS DE EVALUACI脫N DE MODELOS
+RESULTADOS DE EVALUACI覰 DE MODELOS
 ======================================
-
-Fecha: 2025-05-09 10:04:07
 
 
 ========================================
@@ -12,30 +10,30 @@ TAREA: POS
 MODELO 1:
   Embeddings: random
   LSTM: Bidireccional
-  Precisi贸n: 0.9728
-  P茅rdida: 0.2602
-  Tiempo: 35.98 segundos
+  Precisi髇: 0.9387
+  P閞dida: 0.1093
+  Tiempo: 120.11 segundos
 
 MODELO 2:
   Embeddings: word2vec
   LSTM: Bidireccional
-  Precisi贸n: 0.4258
-  P茅rdida: 0.2472
-  Tiempo: 40.71 segundos
+  Precisi髇: 0.9174
+  P閞dida: 0.1486
+  Tiempo: 292.65 segundos
 
 MODELO 3:
   Embeddings: random
   LSTM: Simple
-  Precisi贸n: 0.4169
-  P茅rdida: 0.2992
-  Tiempo: 19.15 segundos
+  Precisi髇: 0.9135
+  P閞dida: 0.1347
+  Tiempo: 72.13 segundos
 
 MODELO 4:
   Embeddings: word2vec
   LSTM: Simple
-  Precisi贸n: 0.4031
-  P茅rdida: 0.4293
-  Tiempo: 44.01 segundos
+  Precisi髇: 0.8917
+  P閞dida: 0.1586
+  Tiempo: 166.68 segundos
 
 
 ========================================
@@ -44,197 +42,197 @@ TAREA: NER
 
 MODELO 1:
   Embeddings: word2vec
-  LSTM: Simple
-  Precisi贸n: 0.5114
-  P茅rdida: 0.7314
-  Tiempo: 100.15 segundos
+  LSTM: Bidireccional
+  Precisi髇: 0.8732
+  P閞dida: 0.3341
+  Tiempo: 446.21 segundos
 
   Resultados de NERvaluate por entidad:
-    Entidad: Dish
-      [Strict] P: 0.5988, R: 0.7049, F1: 0.6475
-      [Exact] P: 0.6637, R: 0.7812, F1: 0.7177
-      [Partial] P: 0.7478, R: 0.8802, F1: 0.8086
-      [Ent_Type] P: 0.6903, R: 0.8125, F1: 0.7464
-    Entidad: Cuisine
-      [Strict] P: 0.6785, R: 0.7566, F1: 0.7154
-      [Exact] P: 0.7733, R: 0.8623, F1: 0.8153
-      [Partial] P: 0.8274, R: 0.9226, F1: 0.8724
-      [Ent_Type] P: 0.7225, R: 0.8057, F1: 0.7618
     Entidad: Location
-      [Strict] P: 0.6122, R: 0.7300, F1: 0.6659
-      [Exact] P: 0.6236, R: 0.7435, F1: 0.6783
-      [Partial] P: 0.7249, R: 0.8644, F1: 0.7885
-      [Ent_Type] P: 0.7777, R: 0.9273, F1: 0.8459
-    Entidad: Price
-      [Strict] P: 0.6029, R: 0.7368, F1: 0.6632
-      [Exact] P: 0.6842, R: 0.8363, F1: 0.7526
-      [Partial] P: 0.7464, R: 0.9123, F1: 0.8211
-      [Ent_Type] P: 0.6555, R: 0.8012, F1: 0.7211
-    Entidad: Rating
-      [Strict] P: 0.5468, R: 0.7337, F1: 0.6266
-      [Exact] P: 0.5730, R: 0.7688, F1: 0.6567
-      [Partial] P: 0.6498, R: 0.8719, F1: 0.7446
-      [Ent_Type] P: 0.6479, R: 0.8693, F1: 0.7425
-    Entidad: Hours
-      [Strict] P: 0.4250, R: 0.6415, F1: 0.5113
-      [Exact] P: 0.4406, R: 0.6651, F1: 0.5301
-      [Partial] P: 0.5406, R: 0.8160, F1: 0.6504
-      [Ent_Type] P: 0.5594, R: 0.8443, F1: 0.6729
-    Entidad: Restaurant_Name
-      [Strict] P: 0.6068, R: 0.6642, F1: 0.6342
-      [Exact] P: 0.6273, R: 0.6866, F1: 0.6556
-      [Partial] P: 0.7580, R: 0.8296, F1: 0.7922
-      [Ent_Type] P: 0.7409, R: 0.8109, F1: 0.7743
+      [Strict] P: 0.6670, R: 0.7608, F1: 0.7108
+      [Exact] P: 0.6735, R: 0.7682, F1: 0.7177
+      [Partial] P: 0.7665, R: 0.8742, F1: 0.8168
+      [Ent_Type] P: 0.8303, R: 0.9470, F1: 0.8848
+    Entidad: Cuisine
+      [Strict] P: 0.7336, R: 0.7792, F1: 0.7557
+      [Exact] P: 0.8242, R: 0.8755, F1: 0.8490
+      [Partial] P: 0.8774, R: 0.9321, F1: 0.9039
+      [Ent_Type] P: 0.7922, R: 0.8415, F1: 0.8161
     Entidad: Amenity
-      [Strict] P: 0.4376, R: 0.5865, F1: 0.5012
-      [Exact] P: 0.4825, R: 0.6466, F1: 0.5526
-      [Partial] P: 0.6059, R: 0.8120, F1: 0.6940
-      [Ent_Type] P: 0.5975, R: 0.8008, F1: 0.6843
+      [Strict] P: 0.5141, R: 0.6504, F1: 0.5743
+      [Exact] P: 0.5632, R: 0.7124, F1: 0.6290
+      [Partial] P: 0.6686, R: 0.8459, F1: 0.7469
+      [Ent_Type] P: 0.6657, R: 0.8421, F1: 0.7436
+    Entidad: Dish
+      [Strict] P: 0.6265, R: 0.7222, F1: 0.6710
+      [Exact] P: 0.7199, R: 0.8299, F1: 0.7710
+      [Partial] P: 0.7937, R: 0.9149, F1: 0.8500
+      [Ent_Type] P: 0.6988, R: 0.8056, F1: 0.7484
+    Entidad: Price
+      [Strict] P: 0.6796, R: 0.8187, F1: 0.7427
+      [Exact] P: 0.6942, R: 0.8363, F1: 0.7586
+      [Partial] P: 0.7573, R: 0.9123, F1: 0.8276
+      [Ent_Type] P: 0.7913, R: 0.9532, F1: 0.8647
+    Entidad: Restaurant_Name
+      [Strict] P: 0.6674, R: 0.7537, F1: 0.7079
+      [Exact] P: 0.6916, R: 0.7811, F1: 0.7336
+      [Partial] P: 0.7819, R: 0.8831, F1: 0.8294
+      [Ent_Type] P: 0.7885, R: 0.8905, F1: 0.8364
+    Entidad: Hours
+      [Strict] P: 0.5306, R: 0.7358, F1: 0.6166
+      [Exact] P: 0.5340, R: 0.7406, F1: 0.6206
+      [Partial] P: 0.6224, R: 0.8632, F1: 0.7233
+      [Ent_Type] P: 0.6633, R: 0.9198, F1: 0.7708
+    Entidad: Rating
+      [Strict] P: 0.6420, R: 0.7839, F1: 0.7059
+      [Exact] P: 0.7037, R: 0.8593, F1: 0.7738
+      [Partial] P: 0.7551, R: 0.9221, F1: 0.8303
+      [Ent_Type] P: 0.7202, R: 0.8794, F1: 0.7919
 
 MODELO 2:
   Embeddings: random
   LSTM: Bidireccional
-  Precisi贸n: 0.5041
-  P茅rdida: 0.7582
-  Tiempo: 128.27 segundos
+  Precisi髇: 0.8487
+  P閞dida: 0.3357
+  Tiempo: 191.67 segundos
 
   Resultados de NERvaluate por entidad:
-    Entidad: Dish
-      [Strict] P: 0.6163, R: 0.7083, F1: 0.6591
-      [Exact] P: 0.7190, R: 0.8264, F1: 0.7690
-      [Partial] P: 0.7855, R: 0.9028, F1: 0.8401
-      [Ent_Type] P: 0.6918, R: 0.7951, F1: 0.7399
-    Entidad: Cuisine
-      [Strict] P: 0.7188, R: 0.7717, F1: 0.7443
-      [Exact] P: 0.8225, R: 0.8830, F1: 0.8517
-      [Partial] P: 0.8699, R: 0.9340, F1: 0.9008
-      [Ent_Type] P: 0.7680, R: 0.8245, F1: 0.7953
     Entidad: Location
-      [Strict] P: 0.6724, R: 0.7694, F1: 0.7177
-      [Exact] P: 0.6800, R: 0.7781, F1: 0.7257
-      [Partial] P: 0.7651, R: 0.8755, F1: 0.8166
-      [Ent_Type] P: 0.8265, R: 0.9457, F1: 0.8821
-    Entidad: Price
-      [Strict] P: 0.7030, R: 0.8304, F1: 0.7614
-      [Exact] P: 0.7228, R: 0.8538, F1: 0.7828
-      [Partial] P: 0.7847, R: 0.9269, F1: 0.8499
-      [Ent_Type] P: 0.8069, R: 0.9532, F1: 0.8740
-    Entidad: Rating
-      [Strict] P: 0.6429, R: 0.7688, F1: 0.7002
-      [Exact] P: 0.6975, R: 0.8342, F1: 0.7597
-      [Partial] P: 0.7584, R: 0.9070, F1: 0.8261
-      [Ent_Type] P: 0.7269, R: 0.8693, F1: 0.7918
-    Entidad: Hours
-      [Strict] P: 0.5548, R: 0.7406, F1: 0.6343
-      [Exact] P: 0.5760, R: 0.7689, F1: 0.6586
-      [Partial] P: 0.6537, R: 0.8726, F1: 0.7475
-      [Ent_Type] P: 0.6643, R: 0.8868, F1: 0.7596
-    Entidad: Restaurant_Name
-      [Strict] P: 0.6041, R: 0.6567, F1: 0.6293
-      [Exact] P: 0.6407, R: 0.6965, F1: 0.6675
-      [Partial] P: 0.7620, R: 0.8284, F1: 0.7938
-      [Ent_Type] P: 0.7323, R: 0.7960, F1: 0.7628
+      [Strict] P: 0.6167, R: 0.7559, F1: 0.6792
+      [Exact] P: 0.6237, R: 0.7645, F1: 0.6870
+      [Partial] P: 0.7133, R: 0.8742, F1: 0.7856
+      [Ent_Type] P: 0.7706, R: 0.9445, F1: 0.8488
+    Entidad: Cuisine
+      [Strict] P: 0.6570, R: 0.7302, F1: 0.6917
+      [Exact] P: 0.7504, R: 0.8340, F1: 0.7900
+      [Partial] P: 0.8226, R: 0.9142, F1: 0.8660
+      [Ent_Type] P: 0.7470, R: 0.8302, F1: 0.7864
     Entidad: Amenity
-      [Strict] P: 0.4897, R: 0.6241, F1: 0.5488
-      [Exact] P: 0.5206, R: 0.6635, F1: 0.5835
-      [Partial] P: 0.6394, R: 0.8148, F1: 0.7165
-      [Ent_Type] P: 0.6622, R: 0.8440, F1: 0.7421
+      [Strict] P: 0.4335, R: 0.5883, F1: 0.4992
+      [Exact] P: 0.4820, R: 0.6541, F1: 0.5550
+      [Partial] P: 0.6039, R: 0.8195, F1: 0.6954
+      [Ent_Type] P: 0.6122, R: 0.8308, F1: 0.7049
+    Entidad: Dish
+      [Strict] P: 0.6185, R: 0.7431, F1: 0.6751
+      [Exact] P: 0.6850, R: 0.8229, F1: 0.7476
+      [Partial] P: 0.7572, R: 0.9097, F1: 0.8265
+      [Ent_Type] P: 0.6994, R: 0.8403, F1: 0.7634
+    Entidad: Price
+      [Strict] P: 0.5418, R: 0.7953, F1: 0.6445
+      [Exact] P: 0.5538, R: 0.8129, F1: 0.6588
+      [Partial] P: 0.6175, R: 0.9064, F1: 0.7346
+      [Ent_Type] P: 0.6614, R: 0.9708, F1: 0.7867
+    Entidad: Restaurant_Name
+      [Strict] P: 0.5736, R: 0.6592, F1: 0.6134
+      [Exact] P: 0.6017, R: 0.6915, F1: 0.6435
+      [Partial] P: 0.7284, R: 0.8371, F1: 0.7789
+      [Ent_Type] P: 0.7143, R: 0.8209, F1: 0.7639
+    Entidad: Hours
+      [Strict] P: 0.4509, R: 0.6934, F1: 0.5465
+      [Exact] P: 0.4571, R: 0.7028, F1: 0.5539
+      [Partial] P: 0.5506, R: 0.8467, F1: 0.6673
+      [Ent_Type] P: 0.6074, R: 0.9340, F1: 0.7361
+    Entidad: Rating
+      [Strict] P: 0.5752, R: 0.7688, F1: 0.6581
+      [Exact] P: 0.6090, R: 0.8141, F1: 0.6968
+      [Partial] P: 0.6729, R: 0.8995, F1: 0.7699
+      [Ent_Type] P: 0.6880, R: 0.9196, F1: 0.7871
 
 MODELO 3:
   Embeddings: word2vec
-  LSTM: Bidireccional
-  Precisi贸n: 0.5030
-  P茅rdida: 0.5271
-  Tiempo: 72.53 segundos
+  LSTM: Simple
+  Precisi髇: 0.8411
+  P閞dida: 0.3848
+  Tiempo: 455.85 segundos
 
   Resultados de NERvaluate por entidad:
-    Entidad: Dish
-      [Strict] P: 0.6332, R: 0.7674, F1: 0.6939
-      [Exact] P: 0.6705, R: 0.8125, F1: 0.7347
-      [Partial] P: 0.7479, R: 0.9062, F1: 0.8195
-      [Ent_Type] P: 0.7278, R: 0.8819, F1: 0.7975
-    Entidad: Cuisine
-      [Strict] P: 0.6930, R: 0.7453, F1: 0.7182
-      [Exact] P: 0.8105, R: 0.8717, F1: 0.8400
-      [Partial] P: 0.8684, R: 0.9340, F1: 0.9000
-      [Ent_Type] P: 0.7474, R: 0.8038, F1: 0.7745
     Entidad: Location
-      [Strict] P: 0.6731, R: 0.7744, F1: 0.7202
-      [Exact] P: 0.6870, R: 0.7904, F1: 0.7351
-      [Partial] P: 0.7722, R: 0.8884, F1: 0.8263
-      [Ent_Type] P: 0.8274, R: 0.9519, F1: 0.8853
-    Entidad: Price
-      [Strict] P: 0.6381, R: 0.7836, F1: 0.7034
-      [Exact] P: 0.6619, R: 0.8129, F1: 0.7297
-      [Partial] P: 0.7381, R: 0.9064, F1: 0.8136
-      [Ent_Type] P: 0.7667, R: 0.9415, F1: 0.8451
-    Entidad: Rating
-      [Strict] P: 0.6463, R: 0.7990, F1: 0.7146
-      [Exact] P: 0.6992, R: 0.8643, F1: 0.7730
-      [Partial] P: 0.7480, R: 0.9246, F1: 0.8270
-      [Ent_Type] P: 0.7195, R: 0.8894, F1: 0.7955
-    Entidad: Hours
-      [Strict] P: 0.5244, R: 0.7594, F1: 0.6204
-      [Exact] P: 0.5277, R: 0.7642, F1: 0.6243
-      [Partial] P: 0.6026, R: 0.8726, F1: 0.7129
-      [Ent_Type] P: 0.6515, R: 0.9434, F1: 0.7707
-    Entidad: Restaurant_Name
-      [Strict] P: 0.6864, R: 0.7512, F1: 0.7173
-      [Exact] P: 0.7182, R: 0.7861, F1: 0.7506
-      [Partial] P: 0.8125, R: 0.8893, F1: 0.8492
-      [Ent_Type] P: 0.8000, R: 0.8756, F1: 0.8361
+      [Strict] P: 0.5807, R: 0.7189, F1: 0.6424
+      [Exact] P: 0.5986, R: 0.7411, F1: 0.6623
+      [Partial] P: 0.6977, R: 0.8637, F1: 0.7719
+      [Ent_Type] P: 0.7341, R: 0.9088, F1: 0.8121
+    Entidad: Cuisine
+      [Strict] P: 0.6844, R: 0.7528, F1: 0.7170
+      [Exact] P: 0.7976, R: 0.8774, F1: 0.8356
+      [Partial] P: 0.8516, R: 0.9368, F1: 0.8922
+      [Ent_Type] P: 0.7290, R: 0.8019, F1: 0.7637
     Entidad: Amenity
-      [Strict] P: 0.4726, R: 0.6165, F1: 0.5351
-      [Exact] P: 0.5202, R: 0.6786, F1: 0.5889
-      [Partial] P: 0.6369, R: 0.8308, F1: 0.7210
-      [Ent_Type] P: 0.6354, R: 0.8289, F1: 0.7194
+      [Strict] P: 0.3997, R: 0.5921, F1: 0.4773
+      [Exact] P: 0.4391, R: 0.6504, F1: 0.5242
+      [Partial] P: 0.5527, R: 0.8186, F1: 0.6598
+      [Ent_Type] P: 0.5508, R: 0.8158, F1: 0.6576
+    Entidad: Dish
+      [Strict] P: 0.6154, R: 0.7222, F1: 0.6645
+      [Exact] P: 0.6923, R: 0.8125, F1: 0.7476
+      [Partial] P: 0.7707, R: 0.9045, F1: 0.8323
+      [Ent_Type] P: 0.6982, R: 0.8194, F1: 0.7540
+    Entidad: Price
+      [Strict] P: 0.5346, R: 0.6784, F1: 0.5979
+      [Exact] P: 0.6083, R: 0.7719, F1: 0.6804
+      [Partial] P: 0.6959, R: 0.8830, F1: 0.7784
+      [Ent_Type] P: 0.6267, R: 0.7953, F1: 0.7010
+    Entidad: Restaurant_Name
+      [Strict] P: 0.5657, R: 0.6965, F1: 0.6243
+      [Exact] P: 0.5818, R: 0.7164, F1: 0.6421
+      [Partial] P: 0.6919, R: 0.8520, F1: 0.7637
+      [Ent_Type] P: 0.6889, R: 0.8483, F1: 0.7603
+    Entidad: Hours
+      [Strict] P: 0.4307, R: 0.6745, F1: 0.5257
+      [Exact] P: 0.4488, R: 0.7028, F1: 0.5478
+      [Partial] P: 0.5392, R: 0.8443, F1: 0.6581
+      [Ent_Type] P: 0.5723, R: 0.8962, F1: 0.6985
+    Entidad: Rating
+      [Strict] P: 0.5672, R: 0.7638, F1: 0.6510
+      [Exact] P: 0.6007, R: 0.8090, F1: 0.6895
+      [Partial] P: 0.6698, R: 0.9020, F1: 0.7687
+      [Ent_Type] P: 0.6567, R: 0.8844, F1: 0.7537
 
 MODELO 4:
   Embeddings: random
   LSTM: Simple
-  Precisi贸n: 0.5000
-  P茅rdida: 0.6422
-  Tiempo: 31.32 segundos
+  Precisi髇: 0.8299
+  P閞dida: 0.3962
+  Tiempo: 207.29 segundos
 
   Resultados de NERvaluate por entidad:
-    Entidad: Dish
-      [Strict] P: 0.5889, R: 0.7361, F1: 0.6543
-      [Exact] P: 0.6333, R: 0.7917, F1: 0.7037
-      [Partial] P: 0.7139, R: 0.8924, F1: 0.7932
-      [Ent_Type] P: 0.6972, R: 0.8715, F1: 0.7747
-    Entidad: Cuisine
-      [Strict] P: 0.6555, R: 0.7396, F1: 0.6950
-      [Exact] P: 0.7609, R: 0.8585, F1: 0.8067
-      [Partial] P: 0.8194, R: 0.9245, F1: 0.8688
-      [Ent_Type] P: 0.7074, R: 0.7981, F1: 0.7500
     Entidad: Location
-      [Strict] P: 0.5758, R: 0.7213, F1: 0.6404
-      [Exact] P: 0.5906, R: 0.7398, F1: 0.6568
-      [Partial] P: 0.6895, R: 0.8637, F1: 0.7668
-      [Ent_Type] P: 0.7234, R: 0.9063, F1: 0.8046
-    Entidad: Price
-      [Strict] P: 0.4174, R: 0.5906, F1: 0.4891
-      [Exact] P: 0.4917, R: 0.6959, F1: 0.5763
-      [Partial] P: 0.5992, R: 0.8480, F1: 0.7022
-      [Ent_Type] P: 0.5579, R: 0.7895, F1: 0.6538
-    Entidad: Rating
-      [Strict] P: 0.5275, R: 0.7236, F1: 0.6102
-      [Exact] P: 0.5495, R: 0.7538, F1: 0.6356
-      [Partial] P: 0.6355, R: 0.8719, F1: 0.7352
-      [Ent_Type] P: 0.6630, R: 0.9095, F1: 0.7669
-    Entidad: Hours
-      [Strict] P: 0.4036, R: 0.6415, F1: 0.4954
-      [Exact] P: 0.4125, R: 0.6557, F1: 0.5064
-      [Partial] P: 0.5178, R: 0.8231, F1: 0.6357
-      [Ent_Type] P: 0.5786, R: 0.9198, F1: 0.7104
-    Entidad: Restaurant_Name
-      [Strict] P: 0.5633, R: 0.6866, F1: 0.6188
-      [Exact] P: 0.5776, R: 0.7040, F1: 0.6345
-      [Partial] P: 0.6969, R: 0.8495, F1: 0.7657
-      [Ent_Type] P: 0.7347, R: 0.8955, F1: 0.8072
+      [Strict] P: 0.5894, R: 0.7275, F1: 0.6512
+      [Exact] P: 0.6054, R: 0.7472, F1: 0.6689
+      [Partial] P: 0.7038, R: 0.8687, F1: 0.7776
+      [Ent_Type] P: 0.7463, R: 0.9211, F1: 0.8245
+    Entidad: Cuisine
+      [Strict] P: 0.6596, R: 0.7642, F1: 0.7080
+      [Exact] P: 0.7427, R: 0.8604, F1: 0.7972
+      [Partial] P: 0.7989, R: 0.9255, F1: 0.8575
+      [Ent_Type] P: 0.7085, R: 0.8208, F1: 0.7605
     Entidad: Amenity
-      [Strict] P: 0.3686, R: 0.5244, F1: 0.4329
-      [Exact] P: 0.4306, R: 0.6128, F1: 0.5058
-      [Partial] P: 0.5647, R: 0.8036, F1: 0.6633
-      [Ent_Type] P: 0.5363, R: 0.7632, F1: 0.6299
+      [Strict] P: 0.3514, R: 0.5357, F1: 0.4244
+      [Exact] P: 0.3933, R: 0.5996, F1: 0.4751
+      [Partial] P: 0.5203, R: 0.7932, F1: 0.6284
+      [Ent_Type] P: 0.5314, R: 0.8102, F1: 0.6418
+    Entidad: Dish
+      [Strict] P: 0.6154, R: 0.6944, F1: 0.6525
+      [Exact] P: 0.6954, R: 0.7847, F1: 0.7374
+      [Partial] P: 0.7877, R: 0.8889, F1: 0.8352
+      [Ent_Type] P: 0.7200, R: 0.8125, F1: 0.7635
+    Entidad: Price
+      [Strict] P: 0.5021, R: 0.7018, F1: 0.5854
+      [Exact] P: 0.5523, R: 0.7719, F1: 0.6439
+      [Partial] P: 0.6339, R: 0.8860, F1: 0.7390
+      [Ent_Type] P: 0.6025, R: 0.8421, F1: 0.7024
+    Entidad: Restaurant_Name
+      [Strict] P: 0.5329, R: 0.6443, F1: 0.5833
+      [Exact] P: 0.5597, R: 0.6766, F1: 0.6126
+      [Partial] P: 0.6903, R: 0.8346, F1: 0.7556
+      [Ent_Type] P: 0.6955, R: 0.8408, F1: 0.7613
+    Entidad: Hours
+      [Strict] P: 0.3881, R: 0.6132, F1: 0.4753
+      [Exact] P: 0.4060, R: 0.6415, F1: 0.4973
+      [Partial] P: 0.5149, R: 0.8137, F1: 0.6307
+      [Ent_Type] P: 0.5642, R: 0.8915, F1: 0.6910
+    Entidad: Rating
+      [Strict] P: 0.5261, R: 0.7085, F1: 0.6039
+      [Exact] P: 0.5560, R: 0.7487, F1: 0.6381
+      [Partial] P: 0.6474, R: 0.8719, F1: 0.7430
+      [Ent_Type] P: 0.6493, R: 0.8744, F1: 0.7452
 

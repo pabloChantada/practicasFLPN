@@ -138,11 +138,13 @@ class SequenceTagger:
         self.embedding_matrix = np.random.uniform(-0.25, 0.25, 
                                               (len(self.word2idx), self.embedding_dim))
         
+        
+
         # Llenar la matriz de embedding con valores pre-entrenados cuando estén disponibles
         for word, idx in self.word2idx.items():
             if word in word2vec:
                 self.embedding_matrix[idx] = word2vec[word]
-        
+
         print(f"Embeddings cargados para {len(self.word2idx)} palabras")
     
     def create_model(self, lstm_units=128):
