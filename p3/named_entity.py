@@ -98,16 +98,17 @@ class NERTagger(SequenceTagger):
                 metrics = mode_scores.get(mode, {})
                 f1 = metrics.get('f1', 0)
                 print(f"  [{mode.title()}] F1: {f1:.4f}")
-    
+        return results_per_tag
+
     def test(self):
         """Evaluar el modelo en datos de prueba con evaluación adicional específica de NER"""
         # Primero, ejecutar la evaluación estándar
         loss, accuracy = super().test()
         
         # Luego ejecutar evaluación específica de NER
-        self.evaluate_with_nervaluate()
+        results_per_tag = self.evaluate_with_nervaluate()
         
-        return loss, accuracy
+        return loss, accuracy, results_per_tag
     
     def run(self, train_file, dev_file, test_file):
         """Pipeline completo para entrenar y evaluar el modelo NER"""
@@ -127,9 +128,10 @@ class NERTagger(SequenceTagger):
         history = self.train()
         
         # Evaluar el modelo
-        loss, accuracy = self.test()
+        loss, accuracy, results_per_tag = self.test()
+
         
-        return history, loss, accuracy
+        return history, loss, accuracy, results_per_tag
 
 
 def main(embedding_type, train_file, dev_file, test_file, bidirectional=True):

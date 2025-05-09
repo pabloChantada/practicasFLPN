@@ -51,7 +51,11 @@ def run_model(task, embedding_type, bidirectional=True):
     
     try:
         # Ejecutar el modelo
-        history, loss, accuracy = tagger_module.main(embedding_type, train_path, dev_path, test_path, bidirectional)
+        if task == "pos":
+            history, loss, accuracy = tagger_module.main(embedding_type, train_path, dev_path, test_path, bidirectional)
+            results_per_tag = None
+        else:  # task == "ner"
+            history, loss, accuracy, results_per_tag = tagger_module.main(embedding_type, train_path, dev_path, test_path, bidirectional)
         
         elapsed_time = time.time() - start_time
         
@@ -65,6 +69,10 @@ def run_model(task, embedding_type, bidirectional=True):
             "loss": float(loss),
             "time": elapsed_time
         }
+        
+        # Añadir resultados específicos de NER
+        if task == "ner":
+            results["results_per_tag"] = results_per_tag
         
         return results
     
@@ -106,7 +114,6 @@ def save_results(results):
         f.write("======================================\n")
         f.write("RESULTADOS DE EVALUACIÓN DE MODELOS\n")
         f.write("======================================\n\n")
-        f.write(f"Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
         
         # Agrupar por tarea
         for task in ["pos", "ner"]:
@@ -125,7 +132,22 @@ def save_results(results):
                     f.write(f"  LSTM: {'Bidireccional' if result['bidirectional'] else 'Simple'}\n")
                     f.write(f"  Precisión: {result['accuracy']:.4f}\n")
                     f.write(f"  Pérdida: {result['loss']:.4f}\n")
-                    f.write(f"  Tiempo: {result['time']:.2f} segundos\n\n")
+                    f.write(f"  Tiempo: {result['time']:.2f} segundos\n")
+                    
+                    # Añadir resultados de nervaluate para NER
+                    if task == "ner" and "results_per_tag" in result:
+                        f.write("\n  Resultados de NERvaluate por entidad:\n")
+                        for entity, mode_scores in result["results_per_tag"].items():
+                            f.write(f"    Entidad: {entity}\n")
+                            for mode in ['strict', 'exact', 'partial', 'ent_type']:
+                                if mode in mode_scores:
+                                    metrics = mode_scores.get(mode, {})
+                                    precision = metrics.get('precision', 0)
+                                    recall = metrics.get('recall', 0)
+                                    f1 = metrics.get('f1', 0)
+                                    f.write(f"      [{mode.title()}] P: {precision:.4f}, R: {recall:.4f}, F1: {f1:.4f}\n")
+                    
+                    f.write("\n")
     
     print(f"Resultados guardados en {filename}")
     return filename
@@ -211,8 +233,7 @@ def plot_results(results):
     plt.tight_layout()
     
     # Guardar gráfico comparativo
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    comparison_filename = f"plots/comparacion_modelos_{timestamp}.png"
+    comparison_filename = "plots/comparacion_modelos.png"
     plt.savefig(comparison_filename)
     plt.close()
     
